@@ -35,21 +35,13 @@
 					fill: $c-cream;
 
 					&:hover {
-						fill: $c-corail;
+						fill: $c-corail !important;
 					}
 				}
 
 				*:not(:last-child) {
 					margin-right: -0.4rem;
 					cursor: pointer;
-				}
-
-				.facebook {
-					fill: $c-cream;
-
-					&:hover {
-						fill: $c-corail;
-					}
 				}
 			}
 

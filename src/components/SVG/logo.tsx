@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from "react";
 
 export interface LogoProps {
-	className?: string;
+	className: string;
+	width: number;
+	height: number;
 	color?: string;
-	width?: number;
-	height?: number;
 }
 
 const Logo: FunctionComponent<LogoProps> = ({ className, color, width, height }: LogoProps) => {

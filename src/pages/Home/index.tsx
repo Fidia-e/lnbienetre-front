@@ -28,7 +28,13 @@ const Home: FunctionComponent = () => {
 						<Logo className="logo" color="#faf2e9" width={120} height={120} />
 					</div>
 					<div className="google-container">
-						<img src={Google} alt="Note Google" width={200} height="auto" />
+						<a
+							href="https://www.google.com/search?sca_esv=72ff9969706166be&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCupz22t2q970qFkC0TyWMZNbWfb9xzDtJD1k5k2KyB7DpOSXrMNLvXfJW3TlysoxKz1djDKW5lAuzBD_MIRNUgZ-Z-uOZxA7FnXd88m1kJCzv8n5JJ&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9Sf2X-1Wvr63GIerjMoMTeh9Vjiq75ndlkYsn94Ediln06ahfeA%3D&q=LN+Bien-Etre+-+Maderotherapie,+drainage+post-operatoire+et+Renata,+ice+madero+Avis&sa=X&ved=2ahUKEwiN0tH8gcWEAxWjVaQEHflzDyQQ3PALegQIShAF&biw=1920&bih=959&dpr=1"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<img src={Google} alt="Note Google" width={200} height="auto" />
+						</a>
 					</div>
 				</div>
 
@@ -41,7 +47,7 @@ const Home: FunctionComponent = () => {
 
 				<button className="button">Prendre rendez-vous</button>
 
-				<Chevron className="chevron" color="#faf2e9" width={30} height={30} />
+				<Chevron className="chevron" color="#faf2e9" width={25} height={25} />
 			</section>
 		</div>
 	);
