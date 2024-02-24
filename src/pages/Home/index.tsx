@@ -14,14 +14,14 @@ const Home: FunctionComponent = () => {
 			<section className="hero">
 				<div className="header">
 					<div className="icons-container">
-						<a className="icon" href="https://www.facebook.com" target="_blank" rel="noreferrer">
-							<Facebook className="facebook" color="#faf2e9" width={40} height={40} />
+						<a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+							<Facebook className="icon facebook" width={40} height={40} />
 						</a>
-						<a className="icon" href="https://www.instagram.com/helene_bienetre/" target="_blank" rel="noreferrer">
-							<Instagram className="instagram" color="#faf2e9" width={40} height={40} />
+						<a href="https://www.instagram.com/helene_bienetre/" target="_blank" rel="noreferrer">
+							<Instagram className="icon instagram" width={40} height={40} />
 						</a>
-						<a className="icon" href="tel:+33640382640">
-							<Phone className="phone" color="#faf2e9" width={40} height={40} />
+						<a href="tel:+33640382640">
+							<Phone className="icon phone" width={40} height={40} />
 						</a>
 					</div>
 					<div className="logo-container">

@@ -30,9 +30,26 @@
 			.icons-container {
 				width: 300px;
 
-				.icon:not(:last-child) {
-					margin-right: -0.5rem;
+				.icon {
+					transition: all 0.3s ease-in-out;
+					fill: $c-cream;
+
+					&:hover {
+						fill: $c-corail;
+					}
+				}
+
+				*:not(:last-child) {
+					margin-right: -0.4rem;
 					cursor: pointer;
+				}
+
+				.facebook {
+					fill: $c-cream;
+
+					&:hover {
+						fill: $c-corail;
+					}
 				}
 			}
 
