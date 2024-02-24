@@ -1,12 +1,17 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
 import "./styles/index.scss";
 
-const App: React.FC = () => {
+const App: FunctionComponent = () => {
 	return (
 		<div className="App">
-			<header className="App-header">
-				<p>Hello world !</p>
-			</header>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />} />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 };

@@ -1,0 +1,78 @@
+.homeContainer {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background: {
+		image: url("/assets/images/hero-bg.webp");
+		position: center;
+		size: cover;
+		repeat: no-repeat;
+	}
+
+	.hero {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5rem;
+
+		.header {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			.icons-container {
+				width: 300px;
+
+				.icon:not(:last-child) {
+					margin-right: -0.5rem;
+					cursor: pointer;
+				}
+			}
+
+			.google-container {
+				width: 300px;
+				display: flex;
+				justify-content: end;
+			}
+		}
+
+		.title {
+			font: {
+				size: 5rem;
+				family: $f-raleway-light;
+			}
+			line-height: 7rem;
+			text-transform: uppercase;
+			text-align: center;
+			color: $c-cream;
+			span {
+				display: block;
+			}
+		}
+
+		.button {
+			font: {
+				size: 1.2rem;
+				family: $f-raleway-regular;
+			}
+			color: $c-cream;
+			background-color: transparent;
+			border: solid 1px $c-cream;
+			border-radius: 50px;
+			padding: 1.5rem 3rem;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				background-color: $c-corail;
+				border: solid 1px $c-corail;
+			}
+		}
+	}
+}
