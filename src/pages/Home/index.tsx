@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from "react";
 
-import Logo from "components/SVG/logo";
-import Facebook from "components/SVG/facebook";
-import Phone from "components/SVG/phone";
-import Instagram from "components/SVG/instagram";
-import Chevron from "components/SVG/chevron";
-import Email from "components/SVG/email";
+import Logo from "assets/images/SVG/logo";
+import Facebook from "assets/images/SVG/facebook";
+import Phone from "assets/images/SVG/phone";
+import Instagram from "assets/images/SVG/instagram";
+import Chevron from "assets/images/SVG/chevron";
+// import Email from "components/SVG/email";
 import Google from "assets/images/google-hero.webp";
 
 const Home: FunctionComponent = () => {
@@ -20,7 +20,7 @@ const Home: FunctionComponent = () => {
 						<a href="https://www.instagram.com/helene_bienetre/" target="_blank" rel="noreferrer">
 							<Instagram className="icon instagram" width={40} height={40} />
 						</a>
-						<a href="tel:+33640382640">
+						<a href="tel:+33749813989">
 							<Phone className="icon phone" width={40} height={40} />
 						</a>
 					</div>
@@ -33,9 +33,13 @@ const Home: FunctionComponent = () => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<img src={Google} alt="Note Google" width={200} height="auto" />
+							<img className="google" src={Google} alt="Note Google" width={200} height="auto" />
 						</a>
 					</div>
+				</div>
+
+				<div className="logo-container-mobile">
+					<Logo className="logo" color="#faf2e9" width={120} height={120} />
 				</div>
 
 				<h1 className="title">
@@ -47,7 +51,7 @@ const Home: FunctionComponent = () => {
 
 				<button className="button">Prendre rendez-vous</button>
 
-				<Chevron className="chevron" color="#faf2e9" width={25} height={25} />
+				<Chevron color="#faf2e9" width={25} height={25} />
 			</section>
 		</div>
 	);

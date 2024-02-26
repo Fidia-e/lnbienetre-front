@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from "react";
 
 export interface FacebookProps {
-	className: string;
 	width: number;
 	height: number;
+	className?: string;
 	color?: string;
 }
 

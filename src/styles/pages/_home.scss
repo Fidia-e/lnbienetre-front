@@ -7,7 +7,7 @@
 	align-items: center;
 	background: {
 		image: url("/assets/images/hero-bg.webp");
-		position: center;
+		position: center center;
 		size: cover;
 		repeat: no-repeat;
 	}
@@ -19,7 +19,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1.5rem;
+		padding: 1rem;
 
 		.header {
 			width: 100%;
@@ -28,36 +28,44 @@
 			align-items: flex-start;
 
 			.icons-container {
-				width: 300px;
+				// width: 300px;
 
 				.icon {
 					transition: all 0.3s ease-in-out;
 					fill: $c-cream;
 
 					&:hover {
-						fill: $c-corail !important;
+						cursor: pointer;
+						fill: $c-corail;
 					}
 				}
 
 				*:not(:last-child) {
 					margin-right: -0.4rem;
-					cursor: pointer;
 				}
 			}
 
+			.logo-container {
+				display: none;
+			}
+
 			.google-container {
-				width: 300px;
+				width: 170px;
 				display: flex;
-				justify-content: end;
+				justify-content: flex-end;
+
+				.google {
+					width: 100%;
+				}
 			}
 		}
 
 		.title {
 			font: {
-				size: 5rem;
+				size: 1.5rem;
 				family: $f-raleway-light;
 			}
-			line-height: 7rem;
+			line-height: 2rem;
 			text-transform: uppercase;
 			text-align: center;
 			color: $c-cream;
@@ -68,19 +76,131 @@
 
 		.button {
 			font: {
-				size: 1.2rem;
+				size: 1.3rem;
 				family: $f-raleway-regular;
 			}
 			color: $c-cream;
 			background-color: transparent;
 			border: solid 1px $c-cream;
 			border-radius: 50px;
-			padding: 1.5rem 3rem;
+			padding: 1rem 2rem;
 			transition: all 0.3s ease-in-out;
 
 			&:hover {
 				background-color: $c-corail;
 				border: solid 1px $c-corail;
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	.homeContainer {
+		.hero {
+			.header {
+				.google-container {
+					width: 200px;
+				}
+			}
+
+			.title {
+				font-size: 2rem;
+				line-height: 3rem;
+			}
+
+			.button {
+				padding: 1.2rem 2.5rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 414px) {
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  TABLETTE ------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 599px) {
+	.homeContainer {
+		.hero {
+			.header {
+				.icons-container {
+					width: 200px;
+				}
+			}
+
+			.title {
+				font-size: 3rem;
+				line-height: 4rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 899px) {
+	.homeContainer {
+		.hero {
+			.title {
+				font-size: 3.5rem;
+				line-height: 4.5rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  DESKTOP -------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 1199px) {
+	.homeContainer {
+		.hero {
+			padding: 1.5rem;
+
+			.header {
+				.logo-container {
+					display: inline;
+				}
+			}
+
+			.logo-container-mobile {
+				display: none;
+			}
+
+			.button {
+				padding: 1.5rem 3rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1399px) {
+	@media (min-width: 1199px) {
+		.homeContainer {
+			.hero {
+				.title {
+					font-size: 4rem;
+					line-height: 5rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1599px) {
+}
+
+@media (min-width: 1920px) {
+	.homeContainer {
+		.hero {
+			.title {
+				font-size: 5rem;
+				line-height: 7rem;
 			}
 		}
 	}
