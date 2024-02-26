@@ -1,121 +1,121 @@
 .homeContainer {
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	background: {
-		image: url("/assets/images/hero-bg.webp");
-		position: center center;
-		size: cover;
-		repeat: no-repeat;
-	}
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: {
+    image: url('/assets/images/hero-bg.webp');
+    position: center center;
+    size: cover;
+    repeat: no-repeat;
+  }
 
-	.hero {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1rem;
+  .hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 
-		.header {
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
-			align-items: flex-start;
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-			.icons-container {
-				// width: 300px;
+      .icons-container {
+        .icon {
+          width: 30px;
+          transition: all 0.3s ease-in-out;
+          fill: $c-cream;
 
-				.icon {
-					transition: all 0.3s ease-in-out;
-					fill: $c-cream;
+          &:hover {
+            cursor: pointer;
+            fill: $c-corail;
+          }
+        }
 
-					&:hover {
-						cursor: pointer;
-						fill: $c-corail;
-					}
-				}
+        .email {
+          margin-left: 0.5rem;
+        }
 
-				*:not(:last-child) {
-					margin-right: -0.4rem;
-				}
-			}
+        *:not(:last-child) {
+          margin-right: -0.4rem;
+        }
+      }
 
-			.logo-container {
-				display: none;
-			}
+      .logo-container {
+        display: none;
+      }
 
-			.google-container {
-				width: 170px;
-				display: flex;
-				justify-content: flex-end;
+      .google-container {
+        width: 150px;
+        display: flex;
+        justify-content: flex-end;
 
-				.google {
-					width: 100%;
-				}
-			}
-		}
+        .google {
+          width: 100%;
+        }
+      }
+    }
 
-		.title {
-			font: {
-				size: 1.5rem;
-				family: $f-raleway-light;
-			}
-			line-height: 2rem;
-			text-transform: uppercase;
-			text-align: center;
-			color: $c-cream;
-			span {
-				display: block;
-			}
-		}
+    .title {
+      font: {
+        size: 1.5rem;
+        family: $f-raleway-light;
+      }
+      line-height: 2rem;
+      text-transform: uppercase;
+      text-align: center;
+      color: $c-cream;
+      span {
+        display: block;
+      }
+    }
 
-		.button {
-			font: {
-				size: 1.3rem;
-				family: $f-raleway-regular;
-			}
-			color: $c-cream;
-			background-color: transparent;
-			border: solid 1px $c-cream;
-			border-radius: 50px;
-			padding: 1rem 2rem;
-			transition: all 0.3s ease-in-out;
+    .button {
+      font: {
+        size: 1.3rem;
+        family: $f-raleway-regular;
+      }
+      color: $c-cream;
+      background-color: transparent;
+      border: solid 1px $c-cream;
+      border-radius: 50px;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease-in-out;
 
-			&:hover {
-				background-color: $c-corail;
-				border: solid 1px $c-corail;
-			}
-		}
-	}
+      &:hover {
+        background-color: $c-corail;
+        border: solid 1px $c-corail;
+      }
+    }
+  }
 }
 
 @media (min-width: 375px) {
-	.homeContainer {
-		.hero {
-			.header {
-				.google-container {
-					width: 200px;
-				}
-			}
-
-			.title {
-				font-size: 2rem;
-				line-height: 3rem;
-			}
-
-			.button {
-				padding: 1.2rem 2.5rem;
-			}
-		}
-	}
 }
 
 @media (min-width: 414px) {
+  .homeContainer {
+    .hero {
+      .header {
+        .icons-container {
+          .icon {
+            width: 40px;
+          }
+        }
+
+        .google-container {
+          width: 200px;
+        }
+      }
+    }
+  }
 }
 
 /*----------------------------------------------------------------------------------
@@ -123,31 +123,31 @@
 ----------------------------------------------------------------------------------*/
 
 @media (min-width: 599px) {
-	.homeContainer {
-		.hero {
-			.header {
-				.icons-container {
-					width: 200px;
-				}
-			}
+  .homeContainer {
+    .hero {
+      .header {
+        .icons-container {
+          width: 200px;
+        }
+      }
 
-			.title {
-				font-size: 3rem;
-				line-height: 4rem;
-			}
-		}
-	}
+      .title {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 899px) {
-	.homeContainer {
-		.hero {
-			.title {
-				font-size: 3.5rem;
-				line-height: 4.5rem;
-			}
-		}
-	}
+  .homeContainer {
+    .hero {
+      .title {
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -158,50 +158,52 @@
 ----------------------------------------------------------------------------------*/
 
 @media (min-width: 1199px) {
-	.homeContainer {
-		.hero {
-			padding: 1.5rem;
+  .homeContainer {
+    .hero {
+      padding: 1.5rem;
 
-			.header {
-				.logo-container {
-					display: inline;
-				}
-			}
+      .header {
+        align-items: flex-start;
 
-			.logo-container-mobile {
-				display: none;
-			}
+        .logo-container {
+          display: inline;
+        }
+      }
 
-			.button {
-				padding: 1.5rem 3rem;
-			}
-		}
-	}
+      .logo-container-mobile {
+        display: none;
+      }
+
+      .button {
+        padding: 1.5rem 3rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 1399px) {
-	@media (min-width: 1199px) {
-		.homeContainer {
-			.hero {
-				.title {
-					font-size: 4rem;
-					line-height: 5rem;
-				}
-			}
-		}
-	}
+  @media (min-width: 1199px) {
+    .homeContainer {
+      .hero {
+        .title {
+          font-size: 4rem;
+          line-height: 5rem;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1599px) {
 }
 
 @media (min-width: 1920px) {
-	.homeContainer {
-		.hero {
-			.title {
-				font-size: 5rem;
-				line-height: 7rem;
-			}
-		}
-	}
+  .homeContainer {
+    .hero {
+      .title {
+        font-size: 5rem;
+        line-height: 7rem;
+      }
+    }
+  }
 }

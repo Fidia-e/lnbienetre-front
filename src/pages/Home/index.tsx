@@ -5,7 +5,7 @@ import Facebook from "assets/images/SVG/facebook";
 import Phone from "assets/images/SVG/phone";
 import Instagram from "assets/images/SVG/instagram";
 import Chevron from "assets/images/SVG/chevron";
-// import Email from "components/SVG/email";
+import Email from "assets/images/SVG/email";
 import Google from "assets/images/google-hero.webp";
 
 const Home: FunctionComponent = () => {
@@ -14,7 +14,7 @@ const Home: FunctionComponent = () => {
 			<section className="hero">
 				<div className="header">
 					<div className="icons-container">
-						<a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+						<a href="https://www.facebook.com/lnbienetre" target="_blank" rel="noreferrer">
 							<Facebook className="icon facebook" width={40} height={40} />
 						</a>
 						<a href="https://www.instagram.com/helene_bienetre/" target="_blank" rel="noreferrer">
@@ -22,6 +22,9 @@ const Home: FunctionComponent = () => {
 						</a>
 						<a href="tel:+33749813989">
 							<Phone className="icon phone" width={40} height={40} />
+						</a>
+						<a href="mailto:bonjour@lnbienetre.com">
+							<Email className="icon email" width={40} height={40} />
 						</a>
 					</div>
 					<div className="logo-container">
