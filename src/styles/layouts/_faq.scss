@@ -132,6 +132,15 @@
 @media (min-width: 1199px) {
   .faq {
     padding: 3rem 1rem;
+    background-image: url('../../assets/images/HandOnShoulderCream1199.svg'),
+      url('../../assets/images/HandOnWaistCream1199.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 
     .title {
       font-size: 2.5rem;
@@ -157,6 +166,16 @@
 
 @media (min-width: 1399px) {
   .faq {
+    background-image: url('../../assets/images/HandOnShoulderCream1399.svg'),
+      url('../../assets/images/HandOnWaistCream1399.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
     .title {
       font-size: 3rem;
       line-height: 4rem;

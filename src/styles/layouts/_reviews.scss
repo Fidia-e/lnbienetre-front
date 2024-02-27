@@ -8,10 +8,6 @@
   background-color: $c-cream;
   padding: 1rem 0;
 
-  .iframe {
-    width: 100% !important;
-  }
-
   .button {
     font-family: $f-raleway-medium;
     font-size: 1.1rem;
@@ -58,6 +54,16 @@
 
 @media (min-width: 1199px) {
   .reviews {
+    background-image: url('../../assets/images/HandOnShoulderBeige1199.svg'),
+      url('../../assets/images/HandOnWaistBeige1199.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
     .button {
       margin: 1rem 0 2rem 0;
       font-size: 1.3rem;
@@ -68,6 +74,16 @@
 
 @media (min-width: 1399px) {
   .reviews {
+    background-image: url('../../assets/images/HandOnShoulderBeige1399.svg'),
+      url('../../assets/images/HandOnWaistBeige1399.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
     .button {
       font-size: 1.4rem;
     }

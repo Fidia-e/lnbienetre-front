@@ -147,6 +147,15 @@
 @media (min-width: 1199px) {
   .services {
     padding: 3rem 1rem;
+    background-image: url('../../assets/images/HandOnShoulderBeige1199.svg'),
+      url('../../assets/images/HandOnWaistBeige1199.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 
     .title {
       width: 30%;
@@ -192,13 +201,23 @@
 
 @media (min-width: 1399px) {
   .services {
+    background-image: url('../../assets/images/HandOnShoulderBeige1399.svg'),
+      url('../../assets/images/HandOnWaistBeige1399.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
     .title {
       font-size: 3rem;
       line-height: 4rem;
     }
 
     .service {
-      width: 80%;
+      width: 70%;
 
       .service-description {
         .service-title {
