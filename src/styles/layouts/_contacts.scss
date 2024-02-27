@@ -1,0 +1,92 @@
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .contact-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: {
+      image: url('/assets/images/contact-bg.webp');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+    padding: 1rem 0;
+
+    .title {
+      font: {
+        size: 1.9rem;
+        family: $f-raleway-regular;
+      }
+      line-height: 2.5rem;
+      text-transform: uppercase;
+      text-align: center;
+      color: $c-white;
+      margin: 2rem 0;
+    }
+
+    .form {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        font-family: $f-quicksand-regular;
+      }
+
+      .textarea {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        min-height: 230px;
+        max-height: 230px;
+        overflow-y: scroll;
+        outline: none;
+        resize: none;
+        padding: 0.5rem;
+        font-family: $f-quicksand-regular;
+      }
+
+      .button {
+        margin: 2rem 0;
+        font: {
+          size: 1.1rem;
+          family: $f-raleway-medium;
+        }
+        color: $c-white;
+        background-color: transparent;
+        border: solid 1px $c-white;
+        border-radius: 50px;
+        padding: 1rem 2rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: $c-browm;
+        }
+      }
+    }
+  }
+
+  .map-container {
+    width: 100%;
+
+    .map {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}

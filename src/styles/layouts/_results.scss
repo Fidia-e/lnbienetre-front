@@ -1,0 +1,44 @@
+.results {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $c-browm;
+  padding: 1rem 0;
+
+  .title {
+    font: {
+      size: 1.9rem;
+      family: $f-raleway-regular;
+    }
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $c-white;
+    margin: 2rem 0;
+  }
+
+  .more-results {
+    display: flex;
+    align-items: center;
+    color: $c-white;
+    font-size: 1rem;
+    margin: 1rem 0;
+
+    .icon {
+      fill: $c-cream;
+      transition: all 0.3s ease-in-out;
+      margin-top: 0.2rem;
+
+      &:hover {
+        fill: $c-beige;
+      }
+    }
+
+    .instagram {
+      margin-left: -0.4rem;
+    }
+  }
+}

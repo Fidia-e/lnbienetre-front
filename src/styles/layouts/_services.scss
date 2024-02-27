@@ -1,0 +1,103 @@
+.services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  .title {
+    font: {
+      size: 1.9rem;
+      family: $f-raleway-regular;
+    }
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $c-browm;
+    margin: 2rem 0;
+  }
+
+  .service {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.5rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $c-cream;
+    border-radius: 5px;
+
+    .service-description {
+      .service-title {
+        color: $c-browm;
+        font: {
+          size: 1.3rem;
+          family: $f-raleway-medium;
+        }
+        line-height: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      .service-text {
+        font-size: 1rem;
+        margin: 1rem 0;
+        line-height: 1.3rem;
+      }
+
+      .service-price {
+        font-family: $f-quicksand-bold;
+        line-height: 1.3rem;
+      }
+    }
+  }
+
+  .button {
+    font-family: $f-raleway-regular;
+    font-size: 1.1rem;
+    color: $c-cream;
+    background-color: $c-corail;
+    border-radius: 50px;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: lighten($c-corail, 10%);
+    }
+  }
+}
+
+@media (min-width: 375px) {
+}
+
+@media (min-width: 414px) {
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  TABLETTE ------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 599px) {
+}
+
+@media (min-width: 899px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  DESKTOP -------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 1199px) {
+}
+
+@media (min-width: 1399px) {
+}
+
+@media (min-width: 1599px) {
+}
+
+@media (min-width: 1920px) {
+}

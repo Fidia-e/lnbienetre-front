@@ -1,20 +1,20 @@
 html {
-	min-width: 100vw;
-	max-width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
 }
 
 body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	color: $c-black;
-	position: relative;
-	overflow-x: hidden;
-	font-family: $f-quicksand-regular;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $c-black;
+  position: relative;
+  overflow-x: hidden;
+  font-family: $f-quicksand-regular;
 }
 
 ::selection {
-	background-color: $c-corail;
-	color: $c-white;
+  background-color: $c-corail;
+  color: $c-white;
 }

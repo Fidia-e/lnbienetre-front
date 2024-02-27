@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from "react";
 
 export interface FacebookProps {
-	width: number;
-	height: number;
-	className?: string;
-	color?: string;
+  width: number;
+  height: number;
+  className?: string;
+  color?: string;
 }
 
 const Email: FunctionComponent<FacebookProps> = ({ className, color, width, height }: FacebookProps) => {

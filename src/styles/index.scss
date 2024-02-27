@@ -1,12 +1,14 @@
 // base
-@import "base/reset", "base/variables", "base/fonts", "base/global";
+@import 'base/reset', 'base/variables', 'base/fonts', 'base/global';
 
 // components
 
 // layouts
+@import 'layouts/hero', 'layouts/services', 'layouts/faq', 'layouts/about', 'layouts/gift', 'layouts/reviews',
+  'layouts/results', 'layouts/contacts';
 
 // pages
-@import "pages/home"; // "pages/blog", "pages/legales-mentions";
+@import 'pages/home'; // "pages/blog", "pages/legales-mentions";
 
 // Default Splide theme
-// @import "@splidejs/react-splide/css";
+@import '@splidejs/react-splide/css';

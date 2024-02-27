@@ -1,0 +1,119 @@
+.faq {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 3rem 1rem;
+  background-color: $c-beige;
+
+  .title {
+    font: {
+      size: 1.9rem;
+      family: $f-raleway-regular;
+    }
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $c-black;
+    margin: 2rem 0;
+  }
+
+  .faq-content {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3rem;
+    margin: 0 auto;
+
+    .question-container {
+      width: 100%;
+      margin: 1rem auto;
+
+      .question {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $f-quicksand-medium;
+        font-size: 1.1rem;
+        list-style: none;
+        cursor: pointer;
+
+        .question-icon {
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .answer-container {
+      width: 100%;
+    }
+
+    details {
+      .question-icon {
+        width: 20px;
+        height: 20px;
+        transform: rotate(-90deg);
+      }
+    }
+
+    details > summary {
+      list-style: none;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] {
+      .question-icon {
+        width: 20px;
+        height: 20px;
+        transform: rotate(0deg);
+      }
+    }
+
+    details[open] summary {
+      transition: all 0.4s ease-in-out;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+}
+
+@media (min-width: 414px) {
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  TABLETTE ------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 599px) {
+}
+
+@media (min-width: 899px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  DESKTOP -------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 1199px) {
+}
+
+@media (min-width: 1399px) {
+}
+
+@media (min-width: 1599px) {
+}
+
+@media (min-width: 1920px) {
+}

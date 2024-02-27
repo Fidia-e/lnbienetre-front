@@ -1,0 +1,33 @@
+.reviews {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $c-white;
+  padding: 1rem 0;
+
+  .iframe {
+    width: 100% !important;
+
+    body {
+      margin: 0 !important;
+    }
+  }
+
+  .button {
+    font-family: $f-raleway-regular;
+    font-size: 1.1rem;
+    color: $c-cream;
+    background-color: $c-corail;
+    border-radius: 50px;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: lighten($c-corail, 10%);
+    }
+  }
+}
