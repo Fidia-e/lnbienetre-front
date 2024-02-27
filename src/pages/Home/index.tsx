@@ -228,7 +228,13 @@ const Home: FunctionComponent = () => {
 
 			<section className="reviews">
 				<iframe src="https://widgets.sociablekit.com/google-reviews/iframe/25372211" width="100%" height="450"></iframe>
-				<button className="button">Ajouter un avis</button>
+				<a
+					href="https://www.google.com/search?sca_esv=72ff9969706166be&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCupz22t2q970qFkC0TyWMZNbWfb9xzDtJD1k5k2KyB7DpOSXrMNLvXfJW3TlysoxKz1djDKW5lAuzBD_MIRNUgZ-Z-uOZxA7FnXd88m1kJCzv8n5JJ&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9Sf2X-1Wvr63GIerjMoMTeh9Vjiq75ndlkYsn94Ediln06ahfeA%3D&q=LN+Bien-Etre+-+Maderotherapie,+drainage+post-operatoire+et+Renata,+ice+madero+Avis&sa=X&ved=2ahUKEwiN0tH8gcWEAxWjVaQEHflzDyQQ3PALegQIShAF&biw=1920&bih=959&dpr=1"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<button className="button">Ajouter un avis</button>
+				</a>
 			</section>
 
 			<section className="results">
