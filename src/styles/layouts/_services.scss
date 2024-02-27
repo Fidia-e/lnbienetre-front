@@ -114,6 +114,30 @@
 }
 
 @media (min-width: 1024px) {
+  .services {
+    .service {
+      width: 80%;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .service-description {
+        .service-text {
+          width: 90%;
+        }
+      }
+    }
+
+    .service:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .service-description {
+        .service-text {
+          width: 85%;
+        }
+        margin-left: 2rem;
+      }
+    }
+  }
 }
 
 /*----------------------------------------------------------------------------------

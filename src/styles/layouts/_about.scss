@@ -72,6 +72,12 @@
 }
 
 @media (min-width: 1024px) {
+  .about {
+    .about-content {
+      width: 70%;
+      flex-direction: row-reverse;
+    }
+  }
 }
 
 /*----------------------------------------------------------------------------------
