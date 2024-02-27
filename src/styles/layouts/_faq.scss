@@ -156,9 +156,36 @@
 }
 
 @media (min-width: 1399px) {
+  .faq {
+    .title {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
 }
 
 @media (min-width: 1599px) {
+  .faq {
+    .title {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+
+    .faq-content {
+      .question-container {
+        .question {
+          font-size: 1.5rem;
+        }
+      }
+
+      .answer-container {
+        .answer {
+          font-size: 1.3rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1920px) {

@@ -71,21 +71,38 @@
     padding: 3rem 1rem;
 
     .title {
-      width: 30%;
       font-size: 2.5rem;
       line-height: 3.5rem;
     }
 
     .more-results {
+      font-size: 1.2rem;
       line-height: 1.7rem;
     }
   }
 }
 
 @media (min-width: 1399px) {
+  .results {
+    .title {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
 }
 
 @media (min-width: 1599px) {
+  .results {
+    .title {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+
+    .more-results {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+    }
+  }
 }
 
 @media (min-width: 1920px) {

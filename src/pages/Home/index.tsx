@@ -284,7 +284,7 @@ const Home: FunctionComponent = () => {
               Pensez à la e-carte cadeau, entièrement personnalisable et valable 6 mois après la date d’achat.
 						</p>
 					</div>
-					<Gift className="gift-icon" width={120} height={120} color="#faf2e9" />
+					<Gift className="gift-icon" width={120} height={120} color="#fff" />
 				</div>
 				<button className="button">Offrir une carte cadeau</button>
 			</section>

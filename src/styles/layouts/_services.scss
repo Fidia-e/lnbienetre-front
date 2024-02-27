@@ -191,9 +191,59 @@
 }
 
 @media (min-width: 1399px) {
+  .services {
+    .title {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+
+    .service {
+      width: 80%;
+
+      .service-description {
+        .service-title {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1599px) {
+  .services {
+    .title {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+
+    .service {
+      .service-description {
+        .service-title {
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+
+        .service-text {
+          font-size: 1.3rem;
+          line-height: 1.8rem;
+        }
+
+        .service-price {
+          font-size: 1.3rem;
+          line-height: 1.8rem;
+        }
+      }
+
+      .service-image {
+        width: 650px;
+      }
+    }
+
+    .button {
+      font-size: 1.4rem;
+    }
+  }
 }
 
 @media (min-width: 1920px) {
