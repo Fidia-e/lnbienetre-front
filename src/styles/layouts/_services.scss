@@ -52,25 +52,21 @@
   }
 
   .button {
-    font-family: $f-raleway-regular;
+    font-family: $f-raleway-medium;
     font-size: 1.1rem;
-    color: $c-cream;
+    color: $c-white;
     background-color: $c-corail;
+    border: solid 1px $c-corail;
     border-radius: 50px;
     margin: 2rem 0;
     padding: 1rem 2rem;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      background-color: lighten($c-corail, 10%);
+      background-color: transparent;
+      color: $c-corail;
     }
   }
-}
-
-@media (min-width: 375px) {
-}
-
-@media (min-width: 414px) {
 }
 
 /*----------------------------------------------------------------------------------
@@ -78,9 +74,43 @@
 ----------------------------------------------------------------------------------*/
 
 @media (min-width: 599px) {
+  .services {
+    padding: 2rem 1rem;
+    background-color: $c-cream;
+
+    .title {
+      width: 80%;
+      font-size: 2.2rem;
+      line-height: 2.7rem;
+      margin: 2rem 0;
+    }
+
+    .service {
+      width: 80%;
+      padding: 1rem 0;
+      background-color: transparent;
+
+      .service-description {
+        .service-title {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+      }
+
+      .service-image {
+        margin-top: 1rem;
+        width: 350px;
+      }
+    }
+  }
 }
 
 @media (min-width: 899px) {
+  .services {
+    .service {
+      width: 70%;
+    }
+  }
 }
 
 @media (min-width: 1024px) {

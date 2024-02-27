@@ -216,14 +216,14 @@ const Home: FunctionComponent = () => {
 			</section>
 
 			<section className="gift">
+				<h3 className="title">Envie d&apos;offrir un instant bien-être ?</h3>
 				<div className="gift-content">
-					<h3 className="title">Envie d&apos;offrir un instant bien-être ?</h3>
 					<p className="description">
             Pensez à la e-carte cadeau, entièrement personnalisable et valable 6 mois après la date d’achat.
 					</p>
-					<button className="button">Offrir une carte cadeau</button>
+					<Gift className="gift-icon" width={120} height={120} color="#faf2e9" />
 				</div>
-				<Gift className="paquet cadeau" width={120} height={120} color="#faf2e9" />
+				<button className="button">Offrir une carte cadeau</button>
 			</section>
 
 			<section className="reviews">

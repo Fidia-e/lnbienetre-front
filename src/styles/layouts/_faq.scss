@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 1rem 3rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
   background-color: $c-beige;
 
   .title {
@@ -36,7 +36,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        font-family: $f-quicksand-medium;
+        font-family: $f-quicksand-semibold;
         font-size: 1.1rem;
         list-style: none;
         cursor: pointer;
@@ -83,20 +83,32 @@
   }
 }
 
-@media (min-width: 375px) {
-}
-
-@media (min-width: 414px) {
-}
-
 /*----------------------------------------------------------------------------------
 -------------------------------------  TABLETTE ------------------------------------
 ----------------------------------------------------------------------------------*/
 
 @media (min-width: 599px) {
+  .faq {
+    padding: 2rem 1rem 3rem 1rem;
+
+    .title {
+      width: 80%;
+      font-size: 2.2rem;
+      line-height: 2.7rem;
+    }
+
+    .faq-content {
+      width: 70%;
+    }
+  }
 }
 
 @media (min-width: 899px) {
+  .faq {
+    .faq-content {
+      width: 60%;
+    }
+  }
 }
 
 @media (min-width: 1024px) {

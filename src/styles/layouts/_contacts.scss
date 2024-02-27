@@ -110,9 +110,31 @@
 ----------------------------------------------------------------------------------*/
 
 @media (min-width: 599px) {
+  .contact {
+    .contact-content {
+      padding: 2rem 0;
+
+      .title {
+        width: 80%;
+        font-size: 2.2rem;
+        line-height: 2.7rem;
+      }
+
+      .form {
+        width: 60%;
+      }
+    }
+  }
 }
 
 @media (min-width: 899px) {
+  .contact {
+    .contact-content {
+      .form {
+        width: 50%;
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {

@@ -13,17 +13,52 @@
   }
 
   .button {
-    font-family: $f-raleway-regular;
+    font-family: $f-raleway-medium;
     font-size: 1.1rem;
     color: $c-cream;
     background-color: $c-corail;
+    border: solid 1px $c-corail;
     border-radius: 50px;
     margin: 1rem 0 2rem 0;
     padding: 1rem 2rem;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      background-color: lighten($c-corail, 10%);
+      background-color: transparent;
+      color: $c-corail;
     }
   }
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  TABLETTE ------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 599px) {
+  .reviews {
+    padding: 2rem 0;
+
+    .button {
+      margin: 3rem 0 1rem 0;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  DESKTOP -------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 1199px) {
+}
+
+@media (min-width: 1399px) {
+}
+
+@media (min-width: 1599px) {
+}
+
+@media (min-width: 1920px) {
 }

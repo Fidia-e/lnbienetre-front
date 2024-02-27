@@ -35,20 +35,40 @@
   }
 }
 
-@media (min-width: 375px) {
-}
-
-@media (min-width: 414px) {
-}
-
 /*----------------------------------------------------------------------------------
 -------------------------------------  TABLETTE ------------------------------------
 ----------------------------------------------------------------------------------*/
 
 @media (min-width: 599px) {
+  .about {
+    padding: 2rem 1rem;
+
+    .title {
+      width: 80%;
+      font-size: 2.2rem;
+      line-height: 2.7rem;
+    }
+
+    .about-content {
+      .about-text {
+        width: 80%;
+      }
+
+      .about-image {
+        width: 350px;
+      }
+    }
+  }
 }
 
 @media (min-width: 899px) {
+  .about {
+    .about-content {
+      .about-text {
+        width: 70%;
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
