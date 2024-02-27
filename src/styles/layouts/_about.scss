@@ -85,6 +85,28 @@
 ----------------------------------------------------------------------------------*/
 
 @media (min-width: 1199px) {
+  .about {
+    padding: 3rem 1rem;
+
+    .title {
+      width: 30%;
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
+    .about-content {
+      width: 75%;
+      display: flex;
+
+      .about-text {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+      }
+
+      .about-image {
+        width: 450px;
+      }
+    }
+  }
 }
 
 @media (min-width: 1399px) {

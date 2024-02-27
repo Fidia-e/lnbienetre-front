@@ -67,6 +67,19 @@
 ----------------------------------------------------------------------------------*/
 
 @media (min-width: 1199px) {
+  .results {
+    padding: 3rem 1rem;
+
+    .title {
+      width: 30%;
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
+
+    .more-results {
+      line-height: 1.7rem;
+    }
+  }
 }
 
 @media (min-width: 1399px) {

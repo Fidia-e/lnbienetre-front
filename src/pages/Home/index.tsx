@@ -68,7 +68,9 @@ const Home: FunctionComponent = () => {
 				<h2 className="title">Nos services sur-mesure</h2>
 				<div className="service">
 					<div className="service-description">
-						<h3 className="service-title">Drainage post-opératoire</h3>
+						<h3 className="service-title">
+              Drainage <br /> post-opératoire
+						</h3>
 						<p className="service-text">
               Avant et après une opération de chirurgie esthétique, le drainage lymphatique est indispensable pour pour
               accélérer le processus de récupération et éviter l&apos;apparition de certains problèmes comme la fibrose.
@@ -123,7 +125,9 @@ const Home: FunctionComponent = () => {
 
 				<div className="service">
 					<div className="service-description">
-						<h3 className="service-title">Soin signature &quot;Drainer & Galber&quot;</h3>
+						<h3 className="service-title">
+              Soin signature <br /> &quot;Drainer & Galber&quot;
+						</h3>
 						<p className="service-text">
               Vous hésitez entre la madérothérapie et le drainage lymphatique ? découvrez notre soin signature “Drainer
               & Galber” combinant à la perfection les 2 techniques. Ce protocole vous permettra d&apos;alléger les
@@ -272,11 +276,14 @@ const Home: FunctionComponent = () => {
 			</section>
 
 			<section className="gift">
-				<h3 className="title">Envie d&apos;offrir un instant bien-être ?</h3>
 				<div className="gift-content">
-					<p className="description">
-            Pensez à la e-carte cadeau, entièrement personnalisable et valable 6 mois après la date d’achat.
-					</p>
+					<div className="gift-text">
+						<h3 className="title">Envie d&apos;offrir un instant bien-être ?</h3>
+
+						<p className="description">
+              Pensez à la e-carte cadeau, entièrement personnalisable et valable 6 mois après la date d’achat.
+						</p>
+					</div>
 					<Gift className="gift-icon" width={120} height={120} color="#faf2e9" />
 				</div>
 				<button className="button">Offrir une carte cadeau</button>

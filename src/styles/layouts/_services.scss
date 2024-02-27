@@ -145,6 +145,49 @@
 ----------------------------------------------------------------------------------*/
 
 @media (min-width: 1199px) {
+  .services {
+    padding: 3rem 1rem;
+
+    .title {
+      width: 30%;
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
+
+    .service {
+      width: 85%;
+
+      .service-description {
+        .service-title {
+          font-family: $f-raleway-regular;
+          font-size: 1.9rem;
+          line-height: 2.9rem;
+        }
+
+        .service-text {
+          font-size: 1.2rem;
+          line-height: 1.7rem;
+          margin: 1rem 0;
+        }
+
+        .service-price {
+          font-size: 1.2rem;
+          line-height: 1.3rem;
+        }
+      }
+
+      .service-image {
+        margin-top: 1rem;
+        width: 500px;
+      }
+    }
+
+    .button {
+      font-size: 1.3rem;
+      margin: 3rem 0;
+      padding: 1.2rem 3.5rem;
+    }
+  }
 }
 
 @media (min-width: 1399px) {

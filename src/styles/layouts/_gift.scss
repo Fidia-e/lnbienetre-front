@@ -6,33 +6,36 @@
   padding: 1rem;
   background-color: $c-corail;
 
-  .title {
-    font: {
-      size: 1.9rem;
-      family: $f-raleway-regular;
-    }
-    line-height: 2.5rem;
-    text-align: center;
-    color: $c-cream;
-    margin: 2rem 0;
-  }
-
   .gift-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .description {
-      font-size: 1rem;
-      line-height: 1.3rem;
-      text-align: center;
-      color: $c-black;
+    .gift-text {
+      .title {
+        font: {
+          size: 1.9rem;
+          family: $f-raleway-regular;
+        }
+        line-height: 2.5rem;
+        text-align: center;
+        color: $c-cream;
+        margin: 2rem 0;
+      }
+
+      .description {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        text-align: center;
+        color: $c-black;
+      }
     }
 
     .gift-icon {
       margin: 2rem 0 0 0;
       width: 80px !important;
+      height: 80px !important;
     }
   }
 
@@ -64,25 +67,30 @@
   .gift {
     padding: 2rem 1rem;
 
-    .title {
-      width: 80%;
-      font-size: 2.2rem;
-      line-height: 2.7rem;
-      margin: 2rem 0;
-    }
-
     .gift-content {
       width: 80%;
       flex-direction: row;
       justify-content: space-between;
 
-      .description {
-        width: 70%;
-        text-align: start;
+      .gift-text {
+        .title {
+          width: 80%;
+          font-size: 2.2rem;
+          line-height: 2.7rem;
+          margin: 2rem 0;
+          text-align: left;
+        }
+
+        .description {
+          width: 70%;
+          text-align: start;
+        }
       }
 
       .gift-icon {
-        margin: 0;
+        margin-top: 8rem;
+        width: 150px !important;
+        height: 150px !important;
       }
     }
 
@@ -105,13 +113,23 @@
   .gift {
     .gift-content {
       .gift-icon {
-        width: 100px !important;
+        width: 120px !important;
+        height: 120px !important;
       }
     }
   }
 }
 
 @media (min-width: 1024px) {
+  .gift {
+    .gift-content {
+      .gift-icon {
+        margin-top: 5rem;
+        width: 150px !important;
+        height: 150px !important;
+      }
+    }
+  }
 }
 
 /*----------------------------------------------------------------------------------
@@ -119,6 +137,35 @@
 ----------------------------------------------------------------------------------*/
 
 @media (min-width: 1199px) {
+  .gift {
+    padding: 1rem;
+
+    .gift-content {
+      width: 90%;
+      .gift-text {
+        .title {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+        }
+
+        .description {
+          font-size: 1.2rem;
+          line-height: 1.7rem;
+        }
+      }
+
+      .gift-icon {
+        width: 150px !important;
+        height: 150px !important;
+      }
+    }
+
+    .button {
+      font-size: 1.3rem;
+      margin: 3rem 0;
+      padding: 1.2rem 3.5rem;
+    }
+  }
 }
 
 @media (min-width: 1399px) {
