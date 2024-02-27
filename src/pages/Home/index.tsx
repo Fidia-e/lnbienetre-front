@@ -65,7 +65,9 @@ const Home: FunctionComponent = () => {
 			</section>
 
 			<section className="services">
-				<h2 className="title">Nos services sur-mesure</h2>
+				<h2 className="title">
+          Nos services <br /> sur-mesure
+				</h2>
 				<div className="service">
 					<div className="service-description">
 						<h3 className="service-title">
