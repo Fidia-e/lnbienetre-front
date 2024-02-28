@@ -1,4 +1,13 @@
-import React, { FunctionComponent } from "react";
+import React, {
+	FunctionComponent,
+	useState,
+	useEffect,
+	useRef,
+	forwardRef,
+	ForwardRefExoticComponent,
+	RefAttributes,
+} from "react";
+import PropTypes from "prop-types";
 
 import Logo from "components/SVG/Logo";
 import Facebook from "components/SVG/Facebook";
@@ -15,7 +24,45 @@ import Ice from "assets/images/ice.webp";
 import Galber from "assets/images/galber.webp";
 import Helene from "assets/images/Helene.webp";
 
+interface AnimatedInputProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  placeholder?: string;
+}
+
 const Home: FunctionComponent = () => {
+	const form = useRef<HTMLFormElement>(null);
+	const inputChild = useRef(null);
+
+	const AnimatedInput: ForwardRefExoticComponent<AnimatedInputProps & RefAttributes<HTMLTextAreaElement>> = forwardRef(
+		(props, ref) => {
+			const { placeholder: passedPlaceholder = "", ...rest } = props;
+			const [placeholder, setPlaceholder] = useState(passedPlaceholder.slice(0, 0));
+			const [placeholderIndex, setPlaceholderIndex] = useState(0);
+
+			useEffect(() => {
+				const typingText = setInterval(() => {
+					setPlaceholder(passedPlaceholder.slice(0, placeholderIndex));
+					if (placeholderIndex + 1 > passedPlaceholder.length) {
+						setPlaceholderIndex(0);
+					} else {
+						setPlaceholderIndex(placeholderIndex + 1);
+					}
+				}, 300);
+				return () => {
+					clearInterval(typingText);
+				};
+			}, [placeholderIndex]);
+
+			return (
+				<textarea {...rest} className="textarea" id="message" name="message" placeholder={placeholder} ref={ref} />
+			);
+		}
+	);
+
+	AnimatedInput.propTypes = {
+		placeholder: PropTypes.string,
+	};
+	AnimatedInput.displayName = "AnimatedInput";
+
 	return (
 		<div className="homeContainer">
 			<section className="hero">
@@ -66,19 +113,21 @@ const Home: FunctionComponent = () => {
 
 			<section className="services">
 				<h2 className="title">
-          Nos services <br /> sur-mesure
+          Nos soins <br /> sur-mesure
 				</h2>
+
 				<div className="service">
 					<div className="service-description">
 						<h3 className="service-title">
               Drainage <br /> post-opératoire
 						</h3>
 						<p className="service-text">
-              Avant et après une opération de chirurgie esthétique, le drainage lymphatique est indispensable pour pour
+              Avant et après une opération de chirurgie esthétique, le drainage lymphatique est indispensable pour
               accélérer le processus de récupération et éviter l&apos;apparition de certains problèmes comme la fibrose.
-              Un bon post-opératoire détermine à 50% le résultat final de l&apos;intervention.
+              Un bon suivi post-opératoire détermine à 50% le résultat final de l&apos;intervention.
 						</p>
 						<span className="service-price">Tarif : à partir de 82 € (en cure ou à l’unité)</span>
+						<button className="button">Je prends rendez-vous</button>
 					</div>
 					<img className="service-image" src={PostOp} alt="Drainage post-opératoire" width={280} height="auto" />
 				</div>
@@ -88,11 +137,12 @@ const Home: FunctionComponent = () => {
 						<h3 className="service-title">Drainage Renata</h3>
 						<p className="service-text">
               Ce massage nettoie l’organisme et contribue à atténuer les problèmes de circulation sanguine et
-              lymphatique. Idéal également pour les personnes qui souffrent de problème de transit, de cellulite aqueuse
-              ou pour les sportifs en récupération musculaire. Un diagnostic personnalisé sera offert lors de votre 1ère
-              séance pour aborder ensemble vos objectifs.
+              lymphatique. Idéal également pour les personnes qui souffrent de problèmes de transit, de cellulite
+              aqueuse ou encore pour les sportifs en récupération musculaire. Un diagnostic personnalisé sera offert
+              lors de votre 1ère séance pour aborder ensemble vos objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 62 € (en cure ou à l’unité)</span>
+						<button className="button">Je prends rendez-vous</button>
 					</div>
 					<img className="service-image" src={Renata} alt="Drainage renata" width={280} height="auto" />
 				</div>
@@ -101,12 +151,12 @@ const Home: FunctionComponent = () => {
 					<div className="service-description">
 						<h3 className="service-title">Madérothérapie</h3>
 						<p className="service-text">
-              Cette technique traditionnelle traditionnelle venue de Colombie consiste, à l’aide d’outils en bois et de
-              mouvements bien spécifiques, à venir casser les amas graisseux, affiner le grain de peau et redessiné
-              votre silhouette. Un diagnostic personnalisé sera offert lors de votre 1ère séance pour aborder ensemble
-              vos objectifs.
+              Cette technique traditionnelle venue de Colombie consiste, à l’aide d’outils en bois et de mouvements bien
+              spécifiques, à venir casser les amas graisseux, affiner le grain de peau et redessiner votre silhouette.
+              Un diagnostic personnalisé sera offert lors de votre 1ère séance pour aborder ensemble vos objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 53 € (en cure ou à l’unité)</span>
+						<button className="button">Je prends rendez-vous</button>
 					</div>
 					<img className="service-image" src={Madero} alt="Madéréthérapie" width={280} height="auto" />
 				</div>
@@ -116,11 +166,12 @@ const Home: FunctionComponent = () => {
 						<h3 className="service-title">Ice Madéro</h3>
 						<p className="service-text">
               L&apos;alliance de la madérothérapie et du froid pour des résultats spectaculaires ! Alliée à l’efficacité
-              de sa crème “intelligente” aux principes actifs actif anti-cellulite et raffermissants, cette innovation
-              permet des résultats plus durables et visibles plus rapidement. Un diagnostic personnalisé sera offert
-              lors de votre 1ère séance pour aborder ensemble vos objectifs.
+              de sa crème “intelligente” aux principes actifs anti-cellulite et raffermissants, cette innovation permet
+              des résultats plus durables et visibles plus rapidement. Un diagnostic personnalisé sera offert lors de
+              votre 1ère séance pour aborder ensemble vos objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 74 € (en cure ou à l’unité)</span>
+						<button className="button">Je prends rendez-vous</button>
 					</div>
 					<img className="service-image" src={Ice} alt="Ice madéro" width={280} height="auto" />
 				</div>
@@ -131,18 +182,17 @@ const Home: FunctionComponent = () => {
               Soin signature <br /> &quot;Drainer & Galber&quot;
 						</h3>
 						<p className="service-text">
-              Vous hésitez entre la madérothérapie et le drainage lymphatique ? découvrez notre soin signature “Drainer
-              & Galber” combinant à la perfection les 2 techniques. Ce protocole vous permettra d&apos;alléger les
+              Vous hésitez entre la madérothérapie et le drainage lymphatique ? Découvrez notre soin signature “Drainer
+              & Galber” combinant à la perfection les deux techniques. Ce protocole vous permettra d&apos;alléger les
               sensations de jambes lourdes et également sculpter les amas graisseux tout en redessinant votre silhouette
               en douceur. Un diagnostic personnalisé sera offert lors de votre 1ère séance pour aborder ensemble vos
               objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 67 € (en cure ou à l’unité)</span>
+						<button className="button">Je prends rendez-vous</button>
 					</div>
 					<img className="service-image" src={Galber} alt="Drainer & Galber" width={280} height="auto" />
 				</div>
-
-				<button className="button">Je prends rendez-vous</button>
 			</section>
 
 			<section className="about">
@@ -288,7 +338,9 @@ const Home: FunctionComponent = () => {
 					</div>
 					<Gift className="gift-icon" width={120} height={120} color="#fff" />
 				</div>
-				<button className="button">Offrir une carte cadeau</button>
+				<a href="https://giftcard.sumup.io/order/GHEAFS1/helene-bien-etre" target="_blank" rel="noreferrer">
+					<button className="button">Offrir une carte cadeau</button>
+				</a>
 			</section>
 
 			<section className="reviews">
@@ -320,10 +372,15 @@ const Home: FunctionComponent = () => {
 			<section className="contact">
 				<div className="contact-content">
 					<h3 className="title">Nous contacter</h3>
-					<form className="form" action="submit">
+					<form className="form" ref={form} action="submit">
 						<input className="input" type="text" placeholder="Votre prénom" />
 						<input className="input" type="email" placeholder="Votre email" />
-						<textarea className="textarea" name="" id="" placeholder="Votre message"></textarea>
+						{/* <textarea className="textarea" name="" id="" placeholder="Votre message"></textarea> */}
+						<AnimatedInput
+							placeholder="Bonjour, ..."
+							// {...register('message', { required: false })}
+							ref={inputChild}
+						/>
 						<button className="button">Envoyer</button>
 					</form>
 				</div>

@@ -28,6 +28,9 @@
     border-radius: 5px;
 
     .service-description {
+      display: flex;
+      flex-direction: column;
+
       .service-title {
         color: $c-browm;
         font: {
@@ -48,23 +51,36 @@
         font-family: $f-quicksand-bold;
         line-height: 1.3rem;
       }
+
+      .button {
+        width: 270px;
+        font-family: $f-raleway-medium;
+        font-size: 1.1rem;
+        color: $c-white;
+        background-color: $c-corail;
+        border: solid 1px $c-corail;
+        border-radius: 50px;
+        margin: 2rem auto;
+        padding: 1rem 2rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: transparent;
+          color: $c-corail;
+        }
+      }
     }
   }
+}
 
-  .button {
-    font-family: $f-raleway-medium;
-    font-size: 1.1rem;
-    color: $c-white;
-    background-color: $c-corail;
-    border: solid 1px $c-corail;
-    border-radius: 50px;
-    margin: 2rem 0;
-    padding: 1rem 2rem;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      background-color: transparent;
-      color: $c-corail;
+@media (min-width: 375px) {
+  .services {
+    .service {
+      .service-description {
+        .button {
+          width: 280px;
+        }
+      }
     }
   }
 }
@@ -105,14 +121,6 @@
   }
 }
 
-@media (min-width: 899px) {
-  .services {
-    .service {
-      width: 70%;
-    }
-  }
-}
-
 @media (min-width: 1024px) {
   .services {
     .service {
@@ -123,6 +131,10 @@
       .service-description {
         .service-text {
           width: 90%;
+        }
+
+        .button {
+          margin: 2rem 0;
         }
       }
     }
@@ -183,18 +195,19 @@
           font-size: 1.2rem;
           line-height: 1.3rem;
         }
+
+        .button {
+          width: 330px;
+          font-size: 1.3rem;
+          margin: 3rem 0;
+          padding: 1.2rem 0;
+        }
       }
 
       .service-image {
         margin-top: 1rem;
         width: 500px;
       }
-    }
-
-    .button {
-      font-size: 1.3rem;
-      margin: 3rem 0;
-      padding: 1.2rem 3.5rem;
     }
   }
 }
