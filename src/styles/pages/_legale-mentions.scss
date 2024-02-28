@@ -1,0 +1,95 @@
+.legales-container {
+  width: 100%;
+  height: 300px;
+  padding: 3rem 1rem;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    font: {
+      size: 1.9rem;
+      family: $f-raleway-regular;
+    }
+    text-transform: uppercase;
+    text-align: center;
+    color: $c-browm;
+  }
+
+  .legales-text {
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 375px) {
+}
+
+@media (min-width: 414px) {
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  TABLETTE ------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 599px) {
+  .legales-container {
+    .title {
+      width: 80%;
+      font-size: 2.2rem;
+      line-height: 2.7rem;
+    }
+  }
+}
+
+@media (min-width: 899px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  DESKTOP -------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 1199px) {
+  .legales-container {
+    height: calc(100vh - 350px);
+    justify-content: space-around;
+
+    .title {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
+
+    .legales-text {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+    }
+  }
+}
+
+@media (min-width: 1399px) {
+  .legales-container {
+    .title {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+}
+
+@media (min-width: 1599px) {
+  .legales-container {
+    .title {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+}
