@@ -30,15 +30,12 @@
     .icon {
       fill: $c-cream;
       transition: all 0.3s ease-in-out;
-      margin-top: 0.2rem;
+
+      margin: 0.2rem 0 0 0.2rem;
 
       &:hover {
         fill: $c-black;
       }
-    }
-
-    .instagram {
-      margin-left: -0.4rem;
     }
   }
 }
