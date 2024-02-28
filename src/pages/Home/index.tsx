@@ -22,7 +22,7 @@ import Renata from "assets/images/renata.webp";
 import Madero from "assets/images/madero.webp";
 import Ice from "assets/images/ice.webp";
 import Galber from "assets/images/galber.webp";
-import Helene from "assets/images/Helene.webp";
+import Helene from "assets/images/helene.webp";
 
 interface AnimatedInputProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   placeholder?: string;

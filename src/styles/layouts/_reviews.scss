@@ -54,8 +54,8 @@
 
 @media (min-width: 1199px) {
   .reviews {
-    background-image: url('../../assets/images/HandOnShoulderBeige1199.svg'),
-      url('../../assets/images/HandOnWaistBeige1199.svg');
+    background-image: url('../../assets/images/SVG/HandOnShoulderBeige1199.svg'),
+      url('../../assets/images/SVG/HandOnWaistBeige1199.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -74,8 +74,8 @@
 
 @media (min-width: 1399px) {
   .reviews {
-    background-image: url('../../assets/images/HandOnShoulderBeige1399.svg'),
-      url('../../assets/images/HandOnWaistBeige1399.svg');
+    background-image: url('../../assets/images/SVG/HandOnShoulderBeige1399.svg'),
+      url('../../assets/images/SVG/HandOnWaistBeige1399.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -83,7 +83,6 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-
     .button {
       font-size: 1.4rem;
     }

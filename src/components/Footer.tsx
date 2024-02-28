@@ -6,7 +6,7 @@ import Instagram from "./SVG/Instagram";
 import Phone from "./SVG/Phone";
 import Email from "./SVG/Email";
 import Logo from "./SVG/Logo";
-import Legs from "assets/images/legs.svg";
+import Legs from "assets/images/SVG/legs.svg";
 
 const Footer = () => {
 	const year = new Date();
