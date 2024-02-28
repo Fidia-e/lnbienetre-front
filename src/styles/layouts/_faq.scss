@@ -38,7 +38,7 @@
         align-items: center;
         font-family: $f-quicksand-semibold;
         font-size: 1rem;
-        list-style: none;
+        line-height: 1.5rem;
         cursor: pointer;
 
         .question-icon {
@@ -55,6 +55,11 @@
 
     .answer-container {
       width: 100%;
+
+      .answer {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
     }
 
     details {

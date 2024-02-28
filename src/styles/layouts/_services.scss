@@ -34,22 +34,23 @@
       .service-title {
         color: $c-browm;
         font: {
-          size: 1.3rem;
+          size: 1.5rem;
           family: $f-raleway-medium;
         }
-        line-height: 1.5rem;
+        line-height: 2rem;
         text-transform: uppercase;
       }
 
       .service-text {
         font-size: 1rem;
         margin: 1rem 0;
-        line-height: 1.3rem;
+        line-height: 1.5rem;
       }
 
       .service-price {
+        font-size: 1rem;
         font-family: $f-quicksand-bold;
-        line-height: 1.3rem;
+        line-height: 1.5rem;
       }
 
       .button {
@@ -105,13 +106,6 @@
       width: 80%;
       padding: 1rem 0;
       background-color: transparent;
-
-      .service-description {
-        .service-title {
-          font-size: 1.5rem;
-          line-height: 2rem;
-        }
-      }
 
       .service-image {
         margin-top: 1rem;
