@@ -26,8 +26,8 @@
         fill: $c-cream;
 
         &:hover {
-          cursor: pointer;
           fill: $c-corail;
+          transform: translateY(-3px);
         }
       }
 

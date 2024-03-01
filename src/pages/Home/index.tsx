@@ -199,12 +199,12 @@ const Home: FunctionComponent = () => {
 				<h2 className="title">À propos</h2>
 				<div className="about-content">
 					<p className="about-text">
-            Toujours fascinée par les métiers du bien- être, j&apos;ai longtemps cru que je n&apos;avais rien à apporter
-            aux femmes, jusqu&apos;au jour où j&apos;ai vécue une mauvaise expérience lors d&apos;une séance de
-            madérothérapie. Ce jour-là, j&apos;ai compris à quel point il était fondamental d&apos;accompagner les
-            femmes avec bienveillance et compassion qui sont souvent en recherche d&apos;amour de soi. Grâce à mon
-            approche holistique, je vous accompagne vers l&apos;atteinte de vos objectifs minceur et esthétique dans la
-            bienveillance et l&apos;écoute.
+            &quot;Toujours fascinée par les métiers du bien-être, j&apos;ai longtemps cru que je n&apos;avais rien à
+            apporter aux femmes, jusqu&apos;au jour où j&apos;ai vécue une mauvaise expérience lors d&apos;une séance de
+            madérothérapie. <br /> Ce jour-là, j&apos;ai compris à quel point il était fondamental d&apos;accompagner
+            les femmes avec compassion, souvent en recherche d&apos;amour de soi. <br /> Grâce à mon approche
+            holistique, je vous accompagne vers l&apos;atteinte de vos objectifs minceur et esthétique dans la
+            bienveillance et l&apos;écoute&quot; - <span className="span">Hélène</span>
 					</p>
 					<img className="about-image" src={Helene} alt="Hélène" width={280} height="auto" />
 				</div>
@@ -344,13 +344,13 @@ const Home: FunctionComponent = () => {
 			</section>
 
 			<section className="reviews">
-				<iframe src="https://widgets.sociablekit.com/google-reviews/iframe/25372211" width="100%" height="450"></iframe>
+				<iframe src="https://491511c2adec41fca4486c05083e1dcc.elf.site" width="95%" height="440"></iframe>
 				<a
 					href="https://www.google.com/search?sca_esv=72ff9969706166be&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCupz22t2q970qFkC0TyWMZNbWfb9xzDtJD1k5k2KyB7DpOSXrMNLvXfJW3TlysoxKz1djDKW5lAuzBD_MIRNUgZ-Z-uOZxA7FnXd88m1kJCzv8n5JJ&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9Sf2X-1Wvr63GIerjMoMTeh9Vjiq75ndlkYsn94Ediln06ahfeA%3D&q=LN+Bien-Etre+-+Maderotherapie,+drainage+post-operatoire+et+Renata,+ice+madero+Avis&sa=X&ved=2ahUKEwiN0tH8gcWEAxWjVaQEHflzDyQQ3PALegQIShAF&biw=1920&bih=959&dpr=1"
 					target="_blank"
 					rel="noreferrer"
 				>
-					<button className="button">Ajouter un avis</button>
+					{/* <button className="button">Ajouter un avis</button> */}
 				</a>
 			</section>
 

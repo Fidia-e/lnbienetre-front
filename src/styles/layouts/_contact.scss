@@ -47,6 +47,10 @@
         margin-bottom: 1rem;
         padding: 0.5rem;
         font-family: $f-quicksand-regular;
+
+        &::placeholder {
+          color: lighten($c-black, 30%);
+        }
       }
 
       .textarea {
@@ -61,6 +65,10 @@
         resize: none;
         padding: 0.5rem;
         font-family: $f-quicksand-regular;
+
+        &::placeholder {
+          color: lighten($c-black, 30%);
+        }
       }
 
       .button {

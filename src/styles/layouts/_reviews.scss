@@ -1,12 +1,13 @@
 .reviews {
   width: 100%;
-  height: auto;
+  height: 420px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: $c-cream;
   padding: 1rem 0;
+  overflow-y: hidden !important;
 
   .button {
     font-family: $f-raleway-medium;
@@ -32,6 +33,7 @@
 
 @media (min-width: 599px) {
   .reviews {
+    height: 400px;
     padding: 2rem 0;
 
     .button {
@@ -83,8 +85,29 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+
+    iframe {
+      width: 90%;
+    }
+
     .button {
       font-size: 1.4rem;
+    }
+  }
+}
+
+@media (min-width: 1399px) {
+  .reviews {
+    iframe {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 1399px) {
+  .reviews {
+    iframe {
+      width: 70%;
     }
   }
 }

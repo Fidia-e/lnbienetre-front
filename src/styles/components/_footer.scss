@@ -17,26 +17,69 @@
     align-items: center;
     width: 100%;
     position: relative;
-    padding: 3rem 1rem 9rem 1rem;
+    padding: 3rem 1rem;
 
-    .reservation {
-      .button {
-        width: 220px;
-        font: {
-          size: 1rem;
-          family: $f-raleway-medium;
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .contentCtn {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        & > *:not(:last-child) {
+          margin-bottom: 1rem;
         }
-        color: $c-corail;
-        background-color: transparent;
-        border: solid 1px $c-corail;
-        border-radius: 50px;
-        padding: 1rem 0;
-        transition: all 0.3s ease-in-out;
 
-        &:hover {
-          background-color: $c-corail;
+        .button {
+          width: 220px;
+          font: {
+            size: 1rem;
+            family: $f-raleway-medium;
+          }
+          color: $c-corail;
+          background-color: transparent;
           border: solid 1px $c-corail;
-          color: $c-cream;
+          border-radius: 50px;
+          padding: 1rem 0;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: $c-corail;
+            border: solid 1px $c-corail;
+            color: $c-cream;
+          }
+        }
+
+        .footer-icons {
+          display: flex;
+          justify-content: center;
+
+          .icon:hover {
+            transform: translateY(-3px);
+          }
+
+          .icon {
+            transition: all 0.3s ease-in-out;
+          }
+
+          & > *:not(:last-child) {
+            margin-right: 0.2rem;
+          }
+        }
+
+        .footer-mentions {
+          text-align: center;
+        }
+
+        .footer-mentions:hover {
+          text-decoration: underline;
         }
       }
     }
@@ -48,34 +91,16 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin: 3rem 0;
+      margin: 2rem 0;
 
-      .footer-adress {
+      .footer-infos {
+        font-family: $f-quicksand-regular;
         font-size: 1rem;
-      }
-
-      .footer-icons {
-        display: flex;
-
-        .icon:hover {
-          transform: translateY(-3px);
-        }
-
-        .icon {
-          transition: all 0.3s ease-in-out;
-        }
+        line-height: 1.5rem;
 
         & > *:not(:last-child) {
-          margin-right: 0.2rem;
+          display: inline-block;
         }
-      }
-
-      & > div:not(:last-child) {
-        margin-bottom: 1rem;
-      }
-
-      .footer-mentions:hover {
-        text-decoration: underline;
       }
     }
 
@@ -133,32 +158,6 @@
 -------------------------------------  TABLETTE ------------------------------------
 ----------------------------------------------------------------------------------*/
 
-@media (min-width: 599px) {
-  .footer-container {
-    .footer-content {
-      padding: 3rem 1rem 5rem 1rem;
-
-      .legs {
-        width: 350px;
-        height: 200px;
-      }
-    }
-  }
-}
-
-@media (min-width: 899px) {
-  .footer-container {
-    .footer-content {
-      padding: 3rem 1rem;
-
-      .legs {
-        width: 400px;
-        height: 250px;
-      }
-    }
-  }
-}
-
 /*----------------------------------------------------------------------------------
 -------------------------------------  DESKTOP -------------------------------------
 ----------------------------------------------------------------------------------*/
@@ -170,30 +169,33 @@
       flex-direction: row;
       padding: 4rem 2rem;
 
-      .reservation {
+      .content {
         width: 30%;
         align-self: start;
+        align-items: flex-start;
 
-        .button {
-          width: 300px;
-          font-size: 1.1rem;
-          margin-top: 2rem;
+        .contentCtn {
+          .button {
+            width: 300px;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+          }
+
+          .footer-mentions {
+            font-size: 1.1rem;
+          }
         }
       }
 
       .contact {
         width: 30%;
 
-        .footer-adress {
+        .footer-infos {
           font-size: 1.1rem;
         }
 
-        & > div:not(:last-child) {
-          margin-bottom: 1.5rem;
-        }
-
-        .footer-mentions {
-          font-size: 1.1rem;
+        .footer-infos > *:not(:last-child) {
+          margin-bottom: 0.5rem;
         }
       }
 
@@ -223,6 +225,7 @@
     }
 
     .credit {
+      width: 100%;
       font-size: 1.1rem;
     }
   }

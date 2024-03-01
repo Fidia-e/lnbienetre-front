@@ -30,11 +30,11 @@
     .icon {
       fill: $c-cream;
       transition: all 0.3s ease-in-out;
-
       margin: 0.2rem 0 0 0.2rem;
 
       &:hover {
         fill: $c-black;
+        transform: translateY(-3px);
       }
     }
   }
