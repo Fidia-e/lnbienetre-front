@@ -31,8 +31,6 @@ interface AnimatedInputProps extends React.TextareaHTMLAttributes<HTMLTextAreaEl
   placeholder?: string;
 }
 
-console.log("testtttttt", process.env.REACT_APP_SERVICE_LOCAL);
-
 init(process.env.REACT_APP_API_KEY_LOCAL || "");
 
 const Home: FunctionComponent = () => {
@@ -42,7 +40,6 @@ const Home: FunctionComponent = () => {
 
 	const firstname = "prénom";
 	const email = "email";
-	const message = "message";
 
 	const {
 		register,
