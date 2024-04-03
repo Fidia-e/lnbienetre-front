@@ -8,6 +8,9 @@ import React, {
 	RefAttributes,
 } from "react";
 import PropTypes from "prop-types";
+import * as emailjs from "@emailjs/browser";
+import { init } from "@emailjs/browser";
+import { useForm } from "react-hook-form";
 
 import Logo from "components/SVG/Logo";
 import Facebook from "components/SVG/Facebook";
@@ -28,9 +31,25 @@ interface AnimatedInputProps extends React.TextareaHTMLAttributes<HTMLTextAreaEl
   placeholder?: string;
 }
 
+console.log("testtttttt", process.env.REACT_APP_SERVICE_LOCAL);
+
+init(process.env.REACT_APP_API_KEY_LOCAL || "");
+
 const Home: FunctionComponent = () => {
 	const form = useRef<HTMLFormElement>(null);
 	const inputChild = useRef(null);
+	const [isSubmitted, setIsSubmitted] = useState(false);
+
+	const firstname = "prénom";
+	const email = "email";
+	const message = "message";
+
+	const {
+		register,
+		handleSubmit,
+		reset,
+		formState: { errors },
+	} = useForm();
 
 	const AnimatedInput: ForwardRefExoticComponent<AnimatedInputProps & RefAttributes<HTMLTextAreaElement>> = forwardRef(
 		(props, ref) => {
@@ -62,6 +81,27 @@ const Home: FunctionComponent = () => {
 		placeholder: PropTypes.string,
 	};
 	AnimatedInput.displayName = "AnimatedInput";
+
+	const sendEmail = (formData: any, e: any) => {
+		e.preventDefault();
+
+		const serviceId = process.env.REACT_APP_SERVICE_LOCAL || "";
+		const templateId = process.env.REACT_APP_TPL_LOCAL || "";
+		const formRef = form.current || "";
+		const apiKey = process.env.REACT_APP_API_KEY_LOCAL || "";
+
+		emailjs.sendForm(serviceId, templateId, formRef, apiKey).then(
+			() => {
+				// console.log('YEP !', response.status, response.text);
+				setIsSubmitted(true);
+			},
+			() => {
+				// console.log('NOPE ...', error);
+				setIsSubmitted(false);
+			}
+		);
+		reset();
+	};
 
 	return (
 		<div className="homeContainer">
@@ -204,7 +244,8 @@ const Home: FunctionComponent = () => {
             madérothérapie. <br /> Ce jour-là, j&apos;ai compris à quel point il était fondamental d&apos;accompagner
             les femmes avec compassion, souvent en recherche d&apos;amour de soi. <br /> Grâce à mon approche
             holistique, je vous accompagne vers l&apos;atteinte de vos objectifs minceur et esthétique dans la
-            bienveillance et l&apos;écoute&quot; - <span className="span">Hélène</span>
+            bienveillance et l&apos;écoute&quot;
+						<span className="span">Hélène - Fondatrice Hélène Bien-Être</span>
 					</p>
 					<img className="about-image" src={Helene} alt="Hélène" width={280} height="auto" />
 				</div>
@@ -371,18 +412,53 @@ const Home: FunctionComponent = () => {
 
 			<section className="contact">
 				<div className="contact-content">
-					<h3 className="title">Nous contacter</h3>
-					<form className="form" ref={form} action="submit">
-						<input className="input" type="text" placeholder="Votre prénom" />
-						<input className="input" type="email" placeholder="Votre email" />
-						{/* <textarea className="textarea" name="" id="" placeholder="Votre message"></textarea> */}
-						<AnimatedInput
-							placeholder="Bonjour, ..."
-							// {...register('message', { required: false })}
-							ref={inputChild}
-						/>
-						<button className="button">Envoyer</button>
-					</form>
+					{isSubmitted ? (
+						<>
+							<div className="confirmation-message">
+								<p>Votre message à bien été envoyé !</p>
+								<p>Merci beaucoup de nous avoir contactés !</p>
+								<p>Nous reviendrons vers vous très prochainement. </p>
+							</div>
+						</>
+					) : (
+						<>
+							<h3 className="title">Nous contacter</h3>
+							<form className="form" ref={form} action="submit" onSubmit={handleSubmit(sendEmail)}>
+								<div className="input-container">
+									<input
+										className="input"
+										type="text"
+										placeholder="Votre prénom"
+										id="firstname"
+										{...register("firstname", { required: true })}
+										name="firstname"
+									/>
+									{errors.firstname && <p className="error-message">Merci de renseigner votre {firstname}</p>}
+								</div>
+
+								<div className="input-container">
+									<input
+										className="input"
+										type="email"
+										placeholder="Votre email"
+										id="email"
+										{...register("email", { required: true })}
+										name="email"
+									/>
+									{errors.email && <p className="error-message">Merci de renseigner votre {email}</p>}
+								</div>
+
+								<div className="textarea-content">
+									<AnimatedInput
+										placeholder="Bonjour, ..."
+										{...register("message", { required: false })}
+										ref={inputChild}
+									/>
+								</div>
+								<button className="button">Envoyer</button>
+							</form>
+						</>
+					)}
 				</div>
 				<div className="map-container">
 					<iframe

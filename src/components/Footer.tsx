@@ -41,13 +41,22 @@ const Footer = () => {
 				</div>
 				<div className="contact">
 					<div className="footer-infos">
-						<p>
-              9, Bd Pierre Mendès France <br /> 77600 Bussy-Saint-Georges
-						</p>{" "}
+						<p className="bold">
+              9, Bd Pierre Mendès France
+							<br />
+              77600 Bussy-Saint-Georges
+						</p>
+						<p className="block">à 2 min à pied du RER A</p>
 						<br />
-						<a href="mailto:bonjour@lnbienetre.com">bonjour@lnbienetre.com</a> <br />
-						<a href="tel:+33749813989">+33 7 49 81 39 89</a> <br />
-						<p>Lundi au Dimanche de 9h à 18h</p>
+						<a className="bold" href="mailto:bonjour@lnbienetre.com">
+              bonjour@lnbienetre.com
+						</a>{" "}
+						<br />
+						<a className="bold" href="tel:+33749813989">
+              +33 7 49 81 39 89
+						</a>{" "}
+						<br />
+						<p className="bold">Lundi au Dimanche de 9h à 18h</p>
 					</div>
 				</div>
 				<div className="logo-copyright">

@@ -27,6 +27,12 @@
     .about-text {
       font-size: 1rem;
       line-height: 1.5rem;
+
+      .span {
+        display: block;
+        font-style: italic;
+        margin-top: 1rem;
+      }
     }
 
     .about-image {

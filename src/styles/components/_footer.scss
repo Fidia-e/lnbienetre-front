@@ -8,6 +8,14 @@
   color: $c-corail;
   font-family: $f-raleway-regular;
 
+  .bold {
+    font-family: $f-quicksand-bold;
+  }
+
+  .block {
+    display: block !important;
+  }
+
   .footer-content {
     width: 100%;
     height: 600px;
