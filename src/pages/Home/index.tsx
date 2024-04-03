@@ -256,112 +256,112 @@ const Home: FunctionComponent = () => {
 				<div className="faq-content">
 					<details className="question-container">
 						<summary className="question">
-							<p>Mangeux d&apos;marde de câline ?</p>
+							<p>Est-ce que la madérothérapie fait mal ?</p>
 							<Chevron className="question-icon" width={20} height={20} color="#000" />
 						</summary>
 						<div className="answer-container">
 							<p className="answer">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores architecto reprehenderit, ullam esse
-                repudiandae explicabo saepe non numquam tempora ea omnis fugit obcaecati assumenda sunt laudantium,
-                aperiam inventore optio praesentium.
+                À première vue, on peut avoir l’impression que ces objets vont vous faire passer un sale quart d’heure !
+                Et je comprends, car nombreuses sont les clientes que nous rencontrons nous font part de leurs
+                mésaventures passées. Il y a plusieurs facteurs : la qualité du matériel utilisé, le type de cellulite
+                ainsi que votre sensibilité. En revanche, dans certains cas, l’apparition d’hématomes peut arriver mais
+                de manière superficielle, puisqu’ils disparaitront les jours suivants la séance. ATTENTION : il est
+                important de choisir une praticienne expérimentée et qualifiée qui saura ajuster la pression en fonction
+                des ressentis de la cliente.
 							</p>
 						</div>
 					</details>
 
 					<details className="question-container">
 						<summary className="question">
-							<p>Jésus Marie Joseph de cibolac ?</p>
+							<p>Quelle est la différence entre la madérothérapie et la Ice Madero ?</p>
 							<Chevron className="question-icon" width={20} height={20} color="#000" />
 						</summary>
 						<div className="answer-container">
 							<p className="answer">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores architecto reprehenderit, ullam esse
-                repudiandae explicabo saepe non numquam tempora ea omnis fugit obcaecati assumenda sunt laudantium,
-                aperiam inventore optio praesentium.
+                À l’inverse de la madérothérapie, la Ice Madero (ou appelée aussi métallothérapie) va utiliser les
+                pouvoirs de thermogénèse. Grâce à son protocole innovant et sa crème dite “intelligente”, cette
+                technique vous promet des résultats visibles et efficaces plus rapidement que la madérothérapie
+                classique. L’essayer c’est l’adopter !
 							</p>
 						</div>
 					</details>
 
 					<details className="question-container">
 						<summary className="question">
-							<p>Torrieux de viande à chien ?</p>
+							<p>Pourquoi avoir recours au drainage lymphatique après une opération de chirurgie esthétique ?</p>
 							<Chevron className="question-icon" width={20} height={20} color="#000" />
 						</summary>
 						<div className="answer-container">
 							<p className="answer">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores architecto reprehenderit, ullam esse
-                repudiandae explicabo saepe non numquam tempora ea omnis fugit obcaecati assumenda sunt laudantium,
-                aperiam inventore optio praesentium.
+                Après le passage au bloc opératoire, il est important de prendre soin de son corps pour optimiser les
+                résultats ; grâce au drainage post-opératoire vous optimiser de 50% les résultats définitifs de votre
+                opération ; la douleur devient moins intense et la récupération est donc plus facile ; la cicatrisation
+                et la réduction des hématomes sont plus rapides ; les résidus de l’anesthésie, sérums et autres
+                médicaments injectés sont éliminés plus rapidement et enfin l’aspect “cartonné” dû à l’apparition de
+                fibrose cicatricielle disparaît.
 							</p>
 						</div>
 					</details>
 
 					<details className="question-container">
 						<summary className="question">
-							<p>Mosus de maudite marde ?</p>
+							<p>Est-ce que le drainage lymphatique méthode Renata fait maigrir ?</p>
 							<Chevron className="question-icon" width={20} height={20} color="#000" />
 						</summary>
 						<div className="answer-container">
 							<p className="answer">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores architecto reprehenderit, ullam esse
-                repudiandae explicabo saepe non numquam tempora ea omnis fugit obcaecati assumenda sunt laudantium,
-                aperiam inventore optio praesentium.
+                NON, désolée de vous décevoir et de briser vos espoirs ! Avant d’être fortement médiatisé, le drainage
+                est principalement recommandé pour les personnes souffrant de problèmes de rétention d’eau, lourdeur
+                dans les jambes, de cellulite dite “aqueuse” ou encore de problèmes de transit (ballonnements,
+                constipation). Selon les morphologies, on observe cependant un effet quasi immédiat de dégonflement et
+                un soulagement instantané qui peut durer plusieurs jours voire plusieurs semaines.
 							</p>
 						</div>
 					</details>
 
 					<details className="question-container">
 						<summary className="question">
-							<p>Mangeux d&apos;marde de câline ?</p>
+							<p>Combien de séances pour obtenir un résultat efficace ?</p>
 							<Chevron className="question-icon" width={20} height={20} color="#000" />
 						</summary>
 						<div className="answer-container">
 							<p className="answer">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores architecto reprehenderit, ullam esse
-                repudiandae explicabo saepe non numquam tempora ea omnis fugit obcaecati assumenda sunt laudantium,
-                aperiam inventore optio praesentium.
+                Lorsqu’on se rencontre lors de votre séance découverte, nous déterminons ensemble le nombre de séances
+                appropriées et le type de soin adapté, en fonction du bilan personnalisée effectué. L’efficacité de la
+                Ice Madero va permettre de faire moins de séance en comparaison avec avec la madero classique.
+                Concernant le drainage post-opératoire, votre chirurgien vous recommandera un certain nombre de séance à
+                effectuer directement après votre opération afin d’assurer de meilleurs résultats.
 							</p>
 						</div>
 					</details>
 
 					<details className="question-container">
 						<summary className="question">
-							<p>Jésus Marie Joseph de cibolac ?</p>
+							<p>En quoi consiste la séance découverte ?</p>
 							<Chevron className="question-icon" width={20} height={20} color="#000" />
 						</summary>
 						<div className="answer-container">
 							<p className="answer">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores architecto reprehenderit, ullam esse
-                repudiandae explicabo saepe non numquam tempora ea omnis fugit obcaecati assumenda sunt laudantium,
-                aperiam inventore optio praesentium.
+                Vous ne savez pas quelle technique choisir ou encore quel est votre type de cellulite ? l’enjeu de cette
+                séance est justement de répondre à toutes vos questions et préoccupations : nous établissons ensemble
+                votre bilan personnalisé afin de déterminer la technique qui convient le mieux à vos attentes avant de
+                profiter du soin. Nous adaptons le soin au moment du rendez-vous si jamais il ne vous conviendrai pas,
+                c’est-à-dire que nous pouvons passer d’une séance de madero à une séance de drainage si c’est
+                nécessaire.
 							</p>
 						</div>
 					</details>
 
 					<details className="question-container">
 						<summary className="question">
-							<p>Torrieux de viande à chien ?</p>
+							<p>Est-ce que je peux régler en plusieurs ma cure ?</p>
 							<Chevron className="question-icon" width={20} height={20} color="#000" />
 						</summary>
 						<div className="answer-container">
 							<p className="answer">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores architecto reprehenderit, ullam esse
-                repudiandae explicabo saepe non numquam tempora ea omnis fugit obcaecati assumenda sunt laudantium,
-                aperiam inventore optio praesentium.
-							</p>
-						</div>
-					</details>
-
-					<details className="question-container">
-						<summary className="question">
-							<p>Mosus de maudite marde ?</p>
-							<Chevron className="question-icon" width={20} height={20} color="#000" />
-						</summary>
-						<div className="answer-container">
-							<p className="answer">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores architecto reprehenderit, ullam esse
-                repudiandae explicabo saepe non numquam tempora ea omnis fugit obcaecati assumenda sunt laudantium,
-                aperiam inventore optio praesentium.
+                Evidemment ! Nous proposons systématiquement à nos clientes la possibilité d’échelonner les paiements
+                sur toute la durée de la cure, de 1 à 3 fois sans frais.
 							</p>
 						</div>
 					</details>

@@ -41,6 +41,10 @@
         line-height: 1.5rem;
         cursor: pointer;
 
+        p {
+          width: 85%;
+        }
+
         .question-icon {
           cursor: pointer;
           transition: all 0.3s ease-in-out;
@@ -156,6 +160,7 @@
       .question-container {
         .question {
           font-size: 1.4rem;
+          line-height: 1.9rem;
         }
       }
 
@@ -199,6 +204,7 @@
       .question-container {
         .question {
           font-size: 1.5rem;
+          line-height: 2rem;
         }
       }
 
