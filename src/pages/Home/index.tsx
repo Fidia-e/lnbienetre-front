@@ -16,10 +16,10 @@ import Logo from "components/SVG/Logo";
 import Facebook from "components/SVG/Facebook";
 import Phone from "components/SVG/Phone";
 import Instagram from "components/SVG/Instagram";
+import Email from "components/SVG/Email";
 import Gift from "components/SVG/Gift";
 import Chevron from "components/SVG/Chevron";
-import Email from "components/SVG/Email";
-import Google from "assets/images/google-hero.webp";
+import Google from "assets/images/google-pink.webp";
 import PostOp from "assets/images/post-op.webp";
 import Renata from "assets/images/renata.webp";
 import Madero from "assets/images/madero.webp";
@@ -100,9 +100,18 @@ const Home: FunctionComponent = () => {
 		reset();
 	};
 
+	useEffect(() => {
+		document.title = "Hélène Bien-Être - Maderothérapie, Drainage post-opératoire et Renata, Ice Madero - Accueil";
+
+		// window.scrollTo({
+		// 	top: 0,
+		// 	behavior: "smooth",
+		// });
+	}, []);
+
 	return (
 		<div className="homeContainer">
-			<section className="hero">
+			<section className="hero" id="accueil">
 				<div className="header">
 					<div className="icons-container">
 						<a href="https://www.facebook.com/lnbienetre" target="_blank" rel="noreferrer">
@@ -148,7 +157,7 @@ const Home: FunctionComponent = () => {
 				<Chevron color="#faf2e9" width={25} height={25} />
 			</section>
 
-			<section className="services">
+			<section className="services" id="tarifs-et-préstations">
 				<h2 className="title">
           Nos soins <br /> sur-mesure
 				</h2>
@@ -232,7 +241,7 @@ const Home: FunctionComponent = () => {
 				</div>
 			</section>
 
-			<section className="about">
+			<section className="about" id="à-propos">
 				<h2 className="title">À propos</h2>
 				<div className="about-content">
 					<p className="about-text">
@@ -248,7 +257,7 @@ const Home: FunctionComponent = () => {
 				</div>
 			</section>
 
-			<section className="faq">
+			<section className="faq" id="faq">
 				<h2 className="title">Questions fréquentes</h2>
 				<div className="faq-content">
 					<details className="question-container">
@@ -381,7 +390,7 @@ const Home: FunctionComponent = () => {
 				</a>
 			</section>
 
-			<section className="reviews">
+			<section className="reviews" id="avis">
 				<iframe src="https://491511c2adec41fca4486c05083e1dcc.elf.site" width="95%" height="440"></iframe>
 				<a
 					href="https://www.google.com/search?sca_esv=72ff9969706166be&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCupz22t2q970qFkC0TyWMZNbWfb9xzDtJD1k5k2KyB7DpOSXrMNLvXfJW3TlysoxKz1djDKW5lAuzBD_MIRNUgZ-Z-uOZxA7FnXd88m1kJCzv8n5JJ&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9Sf2X-1Wvr63GIerjMoMTeh9Vjiq75ndlkYsn94Ediln06ahfeA%3D&q=LN+Bien-Etre+-+Maderotherapie,+drainage+post-operatoire+et+Renata,+ice+madero+Avis&sa=X&ved=2ahUKEwiN0tH8gcWEAxWjVaQEHflzDyQQ3PALegQIShAF&biw=1920&bih=959&dpr=1"
@@ -392,7 +401,7 @@ const Home: FunctionComponent = () => {
 				</a>
 			</section>
 
-			<section className="results">
+			<section className="results" id="avant-après">
 				<h3 className="title">Avant / Après</h3>
 				<div className="more-results">
 					<p>Pour voir plus de résultats →</p>
@@ -407,7 +416,7 @@ const Home: FunctionComponent = () => {
 				</div>
 			</section>
 
-			<section className="contact">
+			<section className="contact" id="contact">
 				<div className="contact-content">
 					{isSubmitted ? (
 						<>

@@ -72,7 +72,7 @@ const Footer = () => {
 			<div className="credit">
 				<p>
           Fait avec ❤️ par{" "}
-					<a href="https://fidia.dev/">
+					<a href="https://fidia.dev/" target="_blank" rel="noreferrer">
 						<span className="fidia">Fidia</span>
 					</a>
 				</p>

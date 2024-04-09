@@ -249,7 +249,7 @@
         font-size: 1.2rem;
         line-height: 1.7rem;
         padding: 3rem 7rem;
-        margin: 1rem;
+        margin: 2rem;
       }
     }
   }
@@ -279,6 +279,11 @@
         .input-container {
           height: 80px;
         }
+      }
+
+      .confirmation-message {
+        margin: 7rem auto;
+        padding: 7rem;
       }
     }
 
