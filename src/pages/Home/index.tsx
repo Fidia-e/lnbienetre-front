@@ -38,15 +38,13 @@ const Home: FunctionComponent = () => {
 	const inputChild = useRef(null);
 	const [isSubmitted, setIsSubmitted] = useState(false);
 
+	const locationURL =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1741859797926!2d2.7077966!3d48.835816099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61ba215a66fa1%3A0xa0a3b87d196a9fb0!2sLN%20Bien-Etre%20-%20Maderotherapie%2C%20drainage%20post-operatoire%20et%20Renata%2C%20ice%20madero!5e0!3m2!1sfr!2sfr!4v1709049186502!5m2!1sfr!2sfr";
+
 	const firstname = "prénom";
 	const email = "email";
 
-	const {
-		register,
-		handleSubmit,
-		reset,
-		formState: { errors },
-	} = useForm();
+	//^ ------------------------------------------------- ANIMATED TEXTAREA ------------------------------------------------- ^//
 
 	const AnimatedInput: ForwardRefExoticComponent<AnimatedInputProps & RefAttributes<HTMLTextAreaElement>> = forwardRef(
 		(props, ref) => {
@@ -79,6 +77,17 @@ const Home: FunctionComponent = () => {
 	};
 	AnimatedInput.displayName = "AnimatedInput";
 
+	//^ -------------------------------------------------------------------------------------------------------------------- ^//
+
+	//^ -------------------------------------------------- FORM HANDLING -------------------------------------------------- ^//
+
+	const {
+		register,
+		handleSubmit,
+		reset,
+		formState: { errors },
+	} = useForm();
+
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const sendEmail = (formData: any, e: any) => {
 		e.preventDefault();
@@ -101,6 +110,8 @@ const Home: FunctionComponent = () => {
 		reset();
 	};
 
+	//^ -------------------------------------------------------------------------------------------------------------------- ^//
+
 	useEffect(() => {
 		document.title = "Hélène Bien-Être - Maderothérapie, Drainage post-opératoire et Renata, Ice Madero - Accueil";
 
@@ -112,6 +123,7 @@ const Home: FunctionComponent = () => {
 
 	return (
 		<div className="homeContainer">
+			{/* //& ---------------------------- ACCUEIL --------------------------- &// */}
 			<section className="hero" id="accueil">
 				<div className="header">
 					<div className="icons-container">
@@ -153,11 +165,16 @@ const Home: FunctionComponent = () => {
 					<span>Ice Madéro</span>
 				</h1>
 
-				<button className="button">Prendre rendez-vous</button>
+				<div className="button-container">
+					<a href="" target="_blank" rel="noreferrer">
+						<button className="button">Prendre rendez-vous</button>
+					</a>
+				</div>
 
 				<Chevron color="#faf2e9" width={25} height={25} />
 			</section>
 
+			{/* //& --------------------------- SERVICES --------------------------- &// */}
 			<section className="services" id="tarifs-et-préstations">
 				<h2 className="title">
           Nos soins <br /> sur-mesure
@@ -242,6 +259,7 @@ const Home: FunctionComponent = () => {
 				</div>
 			</section>
 
+			{/* //& --------------------------- A PROPOS --------------------------- &// */}
 			<section className="about" id="à-propos">
 				<h2 className="title">À propos</h2>
 				<div className="about-content">
@@ -258,6 +276,7 @@ const Home: FunctionComponent = () => {
 				</div>
 			</section>
 
+			{/* //& ------------------------------ FAQ ----------------------------- &// */}
 			<section className="faq" id="faq">
 				<h2 className="title">Questions fréquentes</h2>
 				<div className="faq-content">
@@ -375,6 +394,7 @@ const Home: FunctionComponent = () => {
 				</div>
 			</section>
 
+			{/* //& ------------------------- CARTE CADEAU ------------------------- &// */}
 			<section className="gift">
 				<div className="gift-content">
 					<div className="gift-text">
@@ -391,6 +411,7 @@ const Home: FunctionComponent = () => {
 				</a>
 			</section>
 
+			{/* //& ----------------------------- AVIS ----------------------------- &// */}
 			<section className="reviews" id="avis">
 				<iframe src="https://491511c2adec41fca4486c05083e1dcc.elf.site" width="95%" height="440"></iframe>
 				<a
@@ -402,6 +423,7 @@ const Home: FunctionComponent = () => {
 				</a>
 			</section>
 
+			{/* //& ------------------------ AVANT / APRES ------------------------- &// */}
 			<section className="results" id="avant-après">
 				<h3 className="title">Avant / Après</h3>
 				<div className="more-results">
@@ -417,6 +439,7 @@ const Home: FunctionComponent = () => {
 				</div>
 			</section>
 
+			{/* //& --------------------------- CONTACT ---------------------------- &// */}
 			<section className="contact" id="contact">
 				<div className="contact-content">
 					{isSubmitted ? (
@@ -472,7 +495,7 @@ const Home: FunctionComponent = () => {
 						className="map"
 						title="Carte du cabinet"
 						allowFullScreen
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1741859797926!2d2.7077966!3d48.835816099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61ba215a66fa1%3A0xa0a3b87d196a9fb0!2sLN%20Bien-Etre%20-%20Maderotherapie%2C%20drainage%20post-operatoire%20et%20Renata%2C%20ice%20madero!5e0!3m2!1sfr!2sfr!4v1709049186502!5m2!1sfr!2sfr"
+						src={locationURL}
 						width="100%"
 						height="400"
 						loading="lazy"
