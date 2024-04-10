@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import TinyLogo from "assets/images/tiny-logo.webp";
-import Logo from "components/SVG/Logo";
 import Facebook from "components/SVG/Facebook";
 import Phone from "components/SVG/Phone";
 import Instagram from "components/SVG/Instagram";
@@ -15,6 +14,7 @@ const Header = () => {
 	const [menuVisible, setMenuVisible] = useState(false);
 	const [isChecked, setIsChecked] = useState(false);
 
+	const screenWidth = window.innerWidth;
 	const screenHeight = window.innerHeight;
 
 	const toggleVisible = () => {
@@ -58,8 +58,7 @@ const Header = () => {
 			<div className="navigation">
 				<NavLink to="/" className="logo-container" onClick={() => toggleHomeLink()}>
 					<div className="logo-imageCtn">
-						{/* <Logo className="logo" color="#000000" width={50} height={50} /> */}
-						<img src={TinyLogo} alt="Logo du site" width={40} height={40} />
+						<img src={TinyLogo} alt="Logo du site Hélène Bien-Être" width={40} height={40} />
 					</div>
 				</NavLink>
 
