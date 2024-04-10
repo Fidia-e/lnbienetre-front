@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
+import TinyLogo from "assets/images/tiny-logo.webp";
 import Logo from "components/SVG/Logo";
 import Facebook from "components/SVG/Facebook";
 import Phone from "components/SVG/Phone";
@@ -57,7 +58,8 @@ const Header = () => {
 			<div className="navigation">
 				<NavLink to="/" className="logo-container" onClick={() => toggleHomeLink()}>
 					<div className="logo-imageCtn">
-						<Logo className="logo" color="#000000" width={50} height={50} />
+						{/* <Logo className="logo" color="#000000" width={50} height={50} /> */}
+						<img src={TinyLogo} alt="Logo du site" width={40} height={40} />
 					</div>
 				</NavLink>
 
@@ -78,19 +80,9 @@ const Header = () => {
 					</div>
 				</div>
 
-				<input type="checkbox" id="idCheckbox" />
+				<input type="checkbox" id="idCheckbox" onChange={() => setIsChecked(!isChecked)} checked={isChecked} />
 
-				<label
-					id="burger"
-					htmlFor="idCheckbox"
-					onClick={() => {
-						// console.log("e:", e);
-						// console.log("target:", (e.target as HTMLInputElement).ariaChecked);
-
-						setMenuVisible(!menuVisible);
-						setIsChecked(!isChecked);
-					}}
-				>
+				<label id="burger" htmlFor="idCheckbox" onClick={() => setMenuVisible(!menuVisible)}>
 					<div className="burger top" />
 					<div className="burger middle" />
 					<div className="burger bottom" />

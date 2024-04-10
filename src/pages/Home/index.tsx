@@ -79,6 +79,7 @@ const Home: FunctionComponent = () => {
 	};
 	AnimatedInput.displayName = "AnimatedInput";
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const sendEmail = (formData: any, e: any) => {
 		e.preventDefault();
 

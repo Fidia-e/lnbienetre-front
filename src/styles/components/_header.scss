@@ -1,33 +1,43 @@
 .header-container {
   width: 100vw;
   height: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
   transform: translateY(-100px);
   transition: transform ease-in-out 0.5s;
   z-index: 9999;
+  background-color: $c-beige;
 
   .navigation {
     width: 100vw;
-    height: auto;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $c-beige;
     padding: 0 1rem;
 
     .logo-container {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      .logo-imageCtn {
+        width: 40px;
+        height: 40px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
 
     .icons-container {
       display: flex;
-      margin: 1rem auto;
+      margin: 0.5rem auto;
+
+      a {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     #idCheckbox {
@@ -35,8 +45,8 @@
     }
 
     #burger {
-      width: 2rem;
-      height: 1.5rem;
+      width: 35px;
+      height: 1.2rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -51,27 +61,27 @@
       }
 
       .top {
-        width: 2rem;
+        width: 35px;
       }
 
       .middle {
-        width: 1.5rem;
+        width: 25px;
       }
 
       .bottom {
-        width: 1rem;
+        width: 15px;
       }
     }
 
     #idCheckbox:checked ~ #burger > div:nth-child(1) {
-      transform: translateY(11px) rotate(45deg);
+      transform: translateY(8.5px) rotate(45deg);
     }
     #idCheckbox:checked ~ #burger > div:nth-child(2) {
       opacity: 0;
     }
     #idCheckbox:checked ~ #burger > div:nth-child(3) {
-      transform: translateY(-11px) rotate(-45deg);
-      width: 2rem;
+      transform: translateY(-8.5px) rotate(-45deg);
+      width: 35px;
     }
   }
 
@@ -84,19 +94,19 @@
 
   .nav-list-active {
     width: 100%;
-    height: calc(100vh - 64px);
+    height: calc(100vh - 48px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: $c-beige;
     position: fixed;
-    top: 64px;
+    top: 48px;
     left: 0;
     bottom: 0;
     right: 0;
     line-height: 2.5rem;
-    transition: transform ease-in-out 1s;
+    transition: transform ease-in-out 0.7s;
     z-index: 999;
 
     .google {
@@ -124,7 +134,7 @@
 }
 
 .header-container-fixed {
-  height: 64px;
+  height: 50px;
   position: fixed;
   transform: translateY(0px);
   transition: transform ease-in-out 0.5s;
