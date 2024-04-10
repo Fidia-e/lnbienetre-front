@@ -128,6 +128,7 @@
   .map-container {
     width: 100%;
     height: 300px;
+    z-index: -1;
 
     .map {
       width: 100%;
