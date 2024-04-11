@@ -7,16 +7,12 @@ import Facebook from "components/SVG/Facebook";
 import Phone from "components/SVG/Phone";
 import Instagram from "components/SVG/Instagram";
 import Email from "components/SVG/Email";
-import Google from "assets/images/google-black-1.webp";
 import Logo from "components/SVG/Logo";
 
 const Header = () => {
 	const [fixed, setFixed] = useState(false);
 	const [isMenuVisible, setIsMenuVisible] = useState(false);
 	const [isChecked, setIsChecked] = useState(false);
-
-	const reviewsUrl =
-    "https://www.google.com/search?sca_esv=72ff9969706166be&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCupz22t2q970qFkC0TyWMZNbWfb9xzDtJD1k5k2KyB7DpOSXrMNLvXfJW3TlysoxKz1djDKW5lAuzBD_MIRNUgZ-Z-uOZxA7FnXd88m1kJCzv8n5JJ&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9Sf2X-1Wvr63GIerjMoMTeh9Vjiq75ndlkYsn94Ediln06ahfeA%3D&q=LN+Bien-Etre+-+Maderotherapie,+drainage+post-operatoire+et+Renata,+ice+madero+Avis&sa=X&ved=2ahUKEwiN0tH8gcWEAxWjVaQEHflzDyQQ3PALegQIShAF&biw=1920&bih=959&dpr=1";
 
 	const screenWidth = window.innerWidth;
 	const screenHeight = window.innerHeight;
@@ -121,9 +117,6 @@ const Header = () => {
 			</div>
 
 			<ul className={isMenuVisible ? "nav-list-active" : "nav-list"}>
-				<a href={reviewsUrl} target="_blank" rel="noreferrer">
-					<img className="google" src={Google} alt="Note Google" width={150} height="auto" />
-				</a>
 				<li className="nav-item">
 					<HashLink
 						smooth
@@ -140,13 +133,13 @@ const Header = () => {
 				<li className="nav-item">
 					<HashLink
 						smooth
-						to="/#tarifs-et-préstations"
+						to="/#tarifs-et-prestations"
 						onClick={() => {
 							setIsMenuVisible(false);
 							handleNavigationVisibility();
 						}}
 					>
-            Tarifs & Préstations
+            Tarifs & Prestations
 					</HashLink>
 				</li>
 
@@ -247,13 +240,13 @@ const Header = () => {
 					<li className="nav-item">
 						<HashLink
 							smooth
-							to="/#tarifs-et-préstations"
+							to="/#tarifs-et-prestations"
 							onClick={() => {
 								setIsMenuVisible(false);
 								handleNavigationVisibility();
 							}}
 						>
-              Tarifs & Préstations
+              Tarifs & Prestations
 						</HashLink>
 					</li>
 

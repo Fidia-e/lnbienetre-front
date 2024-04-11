@@ -1,0 +1,148 @@
+.carrousel-gallery {
+  width: 100%;
+
+  .carrousel-item {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    .image {
+      width: 270px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  .splide__arrow--prev {
+    margin-left: -0.8rem;
+  }
+
+  .splide__arrow--next {
+    margin-right: -0.8rem;
+  }
+
+  .splide__pagination {
+    bottom: -2rem;
+  }
+
+  .splide__pagination__page {
+    border: 5px solid $c-white;
+  }
+}
+
+@media (min-width: 360px) {
+  .carrousel-gallery {
+    .splide__arrow--prev {
+      margin-left: 0rem;
+    }
+
+    .splide__arrow--next {
+      margin-right: 0rem;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  TABLETTE ------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 599px) {
+  .carrousel-gallery {
+    .splide__arrow--prev {
+      margin-left: -0.5rem;
+    }
+
+    .splide__arrow--next {
+      margin-right: -0.5rem;
+    }
+  }
+}
+
+@media (min-width: 899px) {
+  .carrousel-gallery {
+    .carrousel-item {
+      .image {
+        width: 350px;
+      }
+    }
+
+    .splide__arrow--prev {
+      margin-left: -0rem;
+    }
+
+    .splide__arrow--next {
+      margin-right: -0rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .carrousel-gallery {
+    .carrousel-item {
+      .image {
+        width: 270px;
+      }
+    }
+
+    .splide__arrow--prev {
+      margin-left: -0.5rem;
+    }
+
+    .splide__arrow--next {
+      margin-right: -0.5rem;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  DESKTOP -------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 1199px) {
+  .carrousel-gallery {
+    .carrousel-item {
+      .image {
+        width: 200px;
+      }
+    }
+
+    .splide__arrow--prev {
+      display: none;
+    }
+
+    .splide__arrow--next {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1399px) {
+  .carrousel-gallery {
+    .carrousel-item {
+      .image {
+        width: 220px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1599px) {
+  .carrousel-gallery {
+    .carrousel-item {
+      .image {
+        width: 250px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .carrousel-gallery {
+    .carrousel-item {
+      .image {
+        width: 320px;
+      }
+    }
+  }
+}

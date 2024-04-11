@@ -125,10 +125,6 @@
     transition: transform ease-in-out 0.7s;
     z-index: 999;
 
-    .google {
-      margin-bottom: 2rem;
-    }
-
     .nav-item {
       width: auto;
       display: flex;
@@ -214,10 +210,6 @@
       top: 60px;
       line-height: 3rem;
 
-      .google {
-        margin-bottom: 3rem;
-      }
-
       .nav-item {
         &:nth-child(n):not(:last-child)::after {
           top: 3rem;
@@ -232,14 +224,6 @@
 }
 
 @media (min-width: 899px) {
-  .header-container {
-    .nav-list-active {
-      .google {
-        margin-bottom: 5rem;
-      }
-    }
-  }
-
   .header-container-fixed {
     height: 60px;
   }
@@ -294,11 +278,6 @@
       top: 70px;
       line-height: 4rem;
       font-size: 1.2rem;
-
-      .google {
-        width: 200px;
-        margin-bottom: 3rem;
-      }
 
       .nav-item {
         &:nth-child(n):not(:last-child)::after {

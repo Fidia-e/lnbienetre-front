@@ -27,6 +27,8 @@ import Ice from "assets/images/ice.webp";
 import Galber from "assets/images/galber.webp";
 import Helene from "assets/images/helene.webp";
 
+import ResultsGallery from "components/ResultsGallery";
+
 interface AnimatedInputProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   placeholder?: string;
 }
@@ -175,7 +177,7 @@ const Home: FunctionComponent = () => {
 			</section>
 
 			{/* //& --------------------------- SERVICES --------------------------- &// */}
-			<section className="services" id="tarifs-et-préstations">
+			<section className="services" id="tarifs-et-prestations">
 				<h2 className="title">
           Nos soins <br /> sur-mesure
 				</h2>
@@ -265,11 +267,11 @@ const Home: FunctionComponent = () => {
 				<div className="about-content">
 					<p className="about-text">
             &quot;Toujours fascinée par les métiers du bien-être, j&apos;ai longtemps cru que je n&apos;avais rien à
-            apporter aux femmes, jusqu&apos;au jour où j&apos;ai vécue une mauvaise expérience lors d&apos;une séance de
-            madérothérapie. <br /> Ce jour-là, j&apos;ai compris à quel point il était fondamental d&apos;accompagner
-            les femmes avec compassion, souvent en recherche d&apos;amour de soi. <br /> Grâce à mon approche
-            holistique, je vous accompagne vers l&apos;atteinte de vos objectifs minceur et esthétique dans la
-            bienveillance et l&apos;écoute&quot;
+            apporter aux femmes, jusqu&apos;au moment où j&apos;ai voulu me faire accompagner pour me sentir mieux dans
+            ma peau et que j&apos;ai malheureusement vécu une mauvaise expérience. <br /> Ce jour-là, j&apos;ai compris
+            à quel point il était fondamental d&apos;accompagner les femmes avec compassion, souvent en recherche
+            d&apos;amour de soi. <br /> Grâce à mon approche holistique, je vous accompagne vers l&apos;atteinte de vos
+            objectifs minceur et esthétique dans la bienveillance et l&apos;écoute&quot;
 						<span className="span">Hélène - Fondatrice Hélène Bien-Être</span>
 					</p>
 					<img className="about-image" src={Helene} alt="Hélène" width={280} height="auto" />
@@ -287,13 +289,13 @@ const Home: FunctionComponent = () => {
 						</summary>
 						<div className="answer-container">
 							<p className="answer">
-                À première vue, on peut avoir l’impression que ces objets vont vous faire passer un sale quart d’heure !
-                Et je comprends, car nombreuses sont les clientes que nous rencontrons nous font part de leurs
-                mésaventures passées. Il y a plusieurs facteurs : la qualité du matériel utilisé, le type de cellulite
-                ainsi que votre sensibilité. En revanche, dans certains cas, l’apparition d’hématomes peut arriver mais
-                de manière superficielle, puisqu’ils disparaitront les jours suivants la séance. ATTENTION : il est
-                important de choisir une praticienne expérimentée et qualifiée qui saura ajuster la pression en fonction
-                des ressentis de la cliente.
+                À première vue, on peut avoir l’impression que ces objets vont vous faire passer un mauvais quart
+                d’heure ! Et je comprends, car nombreuses sont les clientes que nous rencontrons et nous font part de
+                leurs mésaventures passées. Il y a plusieurs facteurs : la qualité du matériel utilisé, le type de
+                cellulite ainsi que votre sensibilité. En revanche, dans certains cas, l’apparition d’hématomes peut
+                arriver mais de manière superficielle, puisqu’ils disparaitront les jours suivants la séance. ATTENTION
+                : il est important de choisir une praticienne expérimentée et qualifiée qui saura ajuster la pression en
+                fonction des ressentis de la cliente.
 							</p>
 						</div>
 					</details>
@@ -338,7 +340,7 @@ const Home: FunctionComponent = () => {
 						<div className="answer-container">
 							<p className="answer">
                 NON, désolée de vous décevoir et de briser vos espoirs ! Avant d’être fortement médiatisé, le drainage
-                est principalement recommandé pour les personnes souffrant de problèmes de rétention d’eau, lourdeur
+                était principalement recommandé pour les personnes souffrant de problèmes de rétention d’eau, lourdeur
                 dans les jambes, de cellulite dite “aqueuse” ou encore de problèmes de transit (ballonnements,
                 constipation). Selon les morphologies, on observe cependant un effet quasi immédiat de dégonflement et
                 un soulagement instantané qui peut durer plusieurs jours voire plusieurs semaines.
@@ -401,7 +403,8 @@ const Home: FunctionComponent = () => {
 						<h3 className="title">Envie d&apos;offrir un instant bien-être ?</h3>
 
 						<p className="description">
-              Pensez à la e-carte cadeau, entièrement personnalisable et valable 6 mois après la date d’achat.
+              Pensez à la e-carte cadeau, entièrement personnalisable et valable 6 mois après la date d’achat. <br />{" "}
+              Vous pouvez aussi passer directement au cabinet pour disposer d&apos;une carte cadeau personnalisée.
 						</p>
 					</div>
 					<Gift className="gift-icon" width={120} height={120} color="#fff" />
@@ -426,6 +429,7 @@ const Home: FunctionComponent = () => {
 			{/* //& ------------------------ AVANT / APRES ------------------------- &// */}
 			<section className="results" id="avant-après">
 				<h3 className="title">Avant / Après</h3>
+				<ResultsGallery />
 				<div className="more-results">
 					<p>Pour voir plus de résultats →</p>
 					<div>
