@@ -20,3 +20,7 @@ body {
   background-color: $c-corail;
   color: $c-white;
 }
+
+.menu-open {
+  overflow-y: hidden !important;
+}

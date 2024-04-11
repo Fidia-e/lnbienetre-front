@@ -2,7 +2,8 @@
 @import 'base/reset', 'base/variables', 'base/fonts', 'base/global';
 
 // components
-@import 'components/header', 'components/footer', 'components/results-gallery', 'components/lightbox';
+@import 'components/header', 'components/footer', 'components/results-gallery', 'components/lightbox',
+  'components/reviews-carousel';
 
 // layouts
 @import 'layouts/hero', 'layouts/services', 'layouts/faq', 'layouts/about', 'layouts/gift', 'layouts/reviews',

@@ -28,6 +28,7 @@ import Galber from "assets/images/galber.webp";
 import Helene from "assets/images/helene.webp";
 
 import ResultsGallery from "components/ResultsGallery";
+import ReviewsCarousel from "components/ReviewsCarousel";
 
 interface AnimatedInputProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   placeholder?: string;
@@ -416,14 +417,9 @@ const Home: FunctionComponent = () => {
 
 			{/* //& ----------------------------- AVIS ----------------------------- &// */}
 			<section className="reviews" id="avis">
-				<iframe src="https://491511c2adec41fca4486c05083e1dcc.elf.site" width="95%" height="440"></iframe>
-				<a
-					href="https://www.google.com/search?sca_esv=72ff9969706166be&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCupz22t2q970qFkC0TyWMZNbWfb9xzDtJD1k5k2KyB7DpOSXrMNLvXfJW3TlysoxKz1djDKW5lAuzBD_MIRNUgZ-Z-uOZxA7FnXd88m1kJCzv8n5JJ&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9Sf2X-1Wvr63GIerjMoMTeh9Vjiq75ndlkYsn94Ediln06ahfeA%3D&q=LN+Bien-Etre+-+Maderotherapie,+drainage+post-operatoire+et+Renata,+ice+madero+Avis&sa=X&ved=2ahUKEwiN0tH8gcWEAxWjVaQEHflzDyQQ3PALegQIShAF&biw=1920&bih=959&dpr=1"
-					target="_blank"
-					rel="noreferrer"
-				>
-					{/* <button className="button">Ajouter un avis</button> */}
-				</a>
+				<h3 className="title">Ce qu&apos;on dit de nous</h3>
+
+				<ReviewsCarousel />
 			</section>
 
 			{/* //& ------------------------ AVANT / APRES ------------------------- &// */}

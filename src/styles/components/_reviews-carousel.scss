@@ -1,0 +1,290 @@
+.carousel-reviews {
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: $f-quicksand-regular;
+
+  .head {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto 0.5rem auto;
+    background-color: #dfdfdf71;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    padding: 1.5rem;
+
+    .title-content {
+      width: 300px;
+
+      .title-google {
+        font-family: $f-quicksand-medium;
+        font-size: 1.2rem;
+
+        span {
+          font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-weight: 600;
+          font-size: 1.8rem;
+
+          &:not(:first-child) {
+            margin-left: -0.3rem;
+          }
+        }
+
+        .blue {
+          color: #4888f4;
+        }
+
+        .red {
+          color: #eb493d;
+        }
+
+        .yellow {
+          color: #fabe1c;
+        }
+
+        .green {
+          color: #3bab58;
+        }
+      }
+
+      .score-container {
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 0;
+
+        .score {
+          font-family: $f-quicksand-semibold;
+        }
+
+        .stars-image {
+          margin: 0 0.5rem;
+        }
+
+        .number {
+          color: #9a9a9a;
+        }
+      }
+    }
+
+    .button-container {
+      .button-google {
+        background-color: #4888f4;
+        color: $c-white;
+        font-family: $f-quicksand-semibold;
+        padding: 0.7rem 1.5rem;
+        font-size: 1.1rem;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .carousel-container {
+    .carrousel-item {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+
+      .content {
+        width: 98%;
+        background-color: #dfdfdf71;
+        backdrop-filter: blur(2px);
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin: 0 auto;
+
+        .client-infos {
+          display: flex;
+
+          .avatar {
+          }
+
+          .name {
+          }
+        }
+
+        .review-starts {
+          margin: 0.5rem 0;
+        }
+
+        .review-text {
+          line-height: 1.5rem;
+        }
+
+        .read-more {
+          color: #9a9a9a;
+          background-color: transparent;
+          padding: 0;
+          margin-top: 0.5rem;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .splide__arrow--prev {
+      margin-left: -1.3rem;
+    }
+
+    .splide__arrow--next {
+      margin-right: -1.3rem;
+    }
+
+    .splide__pagination {
+      bottom: -2rem;
+    }
+
+    .splide__pagination__page {
+      border: 5px solid #9a9a9a;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  TABLETTE ------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 599px) {
+  .carousel-reviews {
+    width: 85%;
+
+    .head {
+      width: 100%;
+    }
+
+    .carousel-container {
+      .carrousel-item {
+        .content {
+          width: 99%;
+
+          .client-infos {
+            .avatar {
+            }
+
+            .name {
+            }
+          }
+        }
+      }
+
+      .splide__arrow--prev {
+        margin-left: -3rem;
+      }
+
+      .splide__arrow--next {
+        margin-right: -3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 899px) {
+  .carousel-reviews {
+    .head {
+      width: 100%;
+    }
+
+    .carousel-container {
+      .carrousel-item {
+        .content {
+          .client-infos {
+            .avatar {
+            }
+
+            .name {
+            }
+          }
+        }
+      }
+
+      .splide__arrow--prev {
+        margin-left: -4rem;
+      }
+
+      .splide__arrow--next {
+        margin-right: -4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-reviews {
+    width: 75%;
+
+    .head {
+      width: 100%;
+    }
+
+    .carousel-container {
+      .carrousel-item {
+        .content {
+          .client-infos {
+            .avatar {
+            }
+
+            .name {
+            }
+          }
+        }
+      }
+
+      .splide__arrow--prev {
+        margin-left: -4rem;
+      }
+
+      .splide__arrow--next {
+        margin-right: -4rem;
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  DESKTOP -------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 1199px) {
+  .carousel-reviews {
+    width: 65%;
+
+    .head {
+      width: 100%;
+    }
+
+    .carousel-container {
+      .carrousel-item {
+        .content {
+          .client-infos {
+            .avatar {
+            }
+
+            .name {
+            }
+          }
+        }
+      }
+
+      .splide__arrow--prev {
+        margin-left: -4rem;
+      }
+
+      .splide__arrow--next {
+        margin-right: -4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1399px) {
+}
+
+@media (min-width: 1599px) {
+}
+
+@media (min-width: 1920px) {
+}

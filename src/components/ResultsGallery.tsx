@@ -7,13 +7,14 @@ import Result2 from "assets/images/result-2.webp";
 import Result3 from "assets/images/result-3.webp";
 import Result4 from "assets/images/result-4.webp";
 import Result5 from "assets/images/result-5.webp";
+import Result6 from "assets/images/result-6.webp";
 
 const ResultsGallery = () => {
 	const widthScreen = window.innerWidth;
 
 	const [isOpen, setIsOpen] = useState(false);
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const [images, setImages] = useState([Result1, Result2, Result3, Result4, Result5]);
+	const [images, setImages] = useState([Result1, Result2, Result3, Result4, Result5, Result6]);
 	const [imageClicked, setImageClicked] = useState(0);
 
 	return (

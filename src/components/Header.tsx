@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -72,14 +72,48 @@ const Header = () => {
 		setIsChecked(false);
 	};
 
-	// bloquer et réactiver le scroll à l'ouverture et fermeture du menu mobile
-	if (isMenuVisible) {
-		document.body.style.overflowY = "hidden";
-	} else {
-		document.body.style.overflowY = "unset";
-	}
+	// // bloquer et réactiver le scroll à l'ouverture et fermeture du menu mobile
+	// if (isMenuVisible === false) {
+	// 	document.body.style.overflowY = "hidden";
+	// } else {
+	// 	document.body.style.overflowY = "unset";
+	// }
 
-	window.addEventListener("scroll", toggleVisible);
+	// useEffect(() => {
+	// 	if (isMenuVisible) {
+	// 		// Ajouter la classe pour bloquer le scroll
+	// 		document.body.classList.add("menu-open");
+	// 		document.body.style.overflowY = "hidden";
+	// 	} else {
+	// 		// Retirer la classe pour réactiver le scroll
+	// 		document.body.classList.remove("menu-open");
+	// 		document.body.style.overflowY = "unset";
+	// 	}
+	// }, [isMenuVisible]);
+
+	useEffect(() => {
+		window.addEventListener("scroll", toggleVisible);
+
+		return () => {
+			window.removeEventListener("scroll", toggleVisible);
+		};
+	}, []);
+
+	useEffect(() => {
+		const mainContent = document.getElementById("root");
+
+		if (isMenuVisible) {
+			document.body.classList.add("menu-open");
+			if (mainContent) {
+				mainContent.classList.add("menu-open");
+			}
+		} else {
+			document.body.classList.remove("menu-open");
+			if (mainContent) {
+				mainContent.classList.remove("menu-open");
+			}
+		}
+	}, [isMenuVisible]);
 
 	return screenWidth <= 1199 ? (
 		<header className={fixed ? "header-container header-container-fixed" : "header-container"}>

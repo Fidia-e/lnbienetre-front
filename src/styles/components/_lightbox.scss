@@ -62,7 +62,9 @@
   margin: auto;
   cursor: pointer;
   opacity: 0.7;
+  display: none;
 }
+
 .ril__navButtons:hover {
   opacity: 1;
 }
@@ -325,6 +327,12 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+@media (min-width: 599px) {
+  .ril__navButtons {
+    display: inline;
+  }
 }
 
 @media (min-width: 1200px) {
