@@ -57,8 +57,10 @@
         margin-bottom: 0.3rem;
         padding: 0.5rem;
         font-family: $f-quicksand-regular;
+        font-size: 1rem;
 
         &::placeholder {
+          font-size: 1rem;
           color: lighten($c-black, 30%);
         }
       }
@@ -75,9 +77,11 @@
         resize: none;
         margin-bottom: 0.3rem;
         padding: 0.5rem;
+        font-size: 1rem;
         font-family: $f-quicksand-regular;
 
         &::placeholder {
+          font-size: 1rem;
           color: lighten($c-black, 30%);
         }
       }
@@ -229,11 +233,19 @@
         .input {
           font-size: 1.2rem;
           line-height: 1.7rem;
+
+          &::placeholder {
+            font-size: 1.2rem;
+          }
         }
 
         .textarea {
           font-size: 1.2rem;
           line-height: 1.7rem;
+
+          &::placeholder {
+            font-size: 1.2rem;
+          }
         }
 
         .error-message {
