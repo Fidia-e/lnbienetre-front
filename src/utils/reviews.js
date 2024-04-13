@@ -27,7 +27,7 @@ const ClientsReviews = [
   },
   {
     id: 4,
-    name: 'Titel Moussa',
+    name: 'Titel Mo',
     alt: 'Avatar de Titel',
     review:
       "Merci à Hélène pour son accueil, son professionnalisme et sa douceur ! Massage tonique de la maderotherapie qu'elle maîtrise à la perfection, les résultats ...",
@@ -35,7 +35,7 @@ const ClientsReviews = [
   },
   {
     id: 5,
-    name: 'Johana Mollet',
+    name: 'Johana Moll',
     alt: 'Avatar de Johana',
     review:
       "Hélène est très professionnelle, elle prend le temps de s'occuper de vous et de répondre à vos objectifs. J'ai été bluffé par le résultat suite à ma première ...",
