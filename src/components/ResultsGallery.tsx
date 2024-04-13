@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Lightbox from "react-18-image-lightbox";
 
@@ -9,7 +9,7 @@ import Result4 from "assets/images/result-4.webp";
 import Result5 from "assets/images/result-5.webp";
 import Result6 from "assets/images/result-6.webp";
 
-const ResultsGallery = () => {
+const ResultsGallery: FunctionComponent = () => {
 	const widthScreen = window.innerWidth;
 
 	const [isOpen, setIsOpen] = useState(false);

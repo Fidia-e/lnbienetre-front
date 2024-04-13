@@ -1,0 +1,129 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #edb89ed3;
+  backdrop-filter: blur(5px);
+  z-index: 9999999999999;
+  color: $c-white;
+  padding: 50px 0 0 0;
+  color: $c-black;
+
+  .modal-text {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0 5rem 0;
+    overflow-y: scroll;
+
+    .member-name {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      font-style: italic;
+      font-family: $f-raleway-semibold;
+    }
+
+    .moretext {
+      display: flex;
+      align-self: center;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-family: $f-quicksand-medium;
+      padding: 15px 0;
+    }
+  }
+
+  .modal-close {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-family: $f-raleway-semibold;
+    margin-left: 1.5rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+
+    .span-close {
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  TABLETTE ------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 599px) {
+  .modal {
+    .modal-text {
+      width: 80%;
+
+      .member-name {
+        font-size: 1.5rem;
+      }
+
+      .moretext {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        padding: 25px 0;
+      }
+    }
+
+    .modal-close {
+      font-size: 1.5rem;
+
+      .span-close {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------
+-------------------------------------  DESKTOP -------------------------------------
+----------------------------------------------------------------------------------*/
+
+@media (min-width: 1024px) {
+  .modal {
+    padding: 50px;
+
+    .modal-text {
+      width: 70%;
+      align-items: center;
+
+      .member-name {
+        font-size: 2rem;
+      }
+
+      .moretext {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+
+    .modal-close {
+      font-size: 2rem;
+      top: 2rem;
+      right: 3rem;
+
+      .span-close {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1399px) {
+  .modal {
+    width: 50vw;
+  }
+}

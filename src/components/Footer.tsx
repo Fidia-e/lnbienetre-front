@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 
 import Facebook from "./SVG/Facebook";
@@ -7,7 +7,7 @@ import Phone from "./SVG/Phone";
 import Email from "./SVG/Email";
 import Logo from "./SVG/Logo";
 
-const Footer = () => {
+const Footer: FunctionComponent = () => {
 	const year = new Date();
 
 	return (

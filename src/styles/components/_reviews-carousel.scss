@@ -59,6 +59,7 @@
 
         .score {
           font-family: $f-quicksand-semibold;
+          font-size: 1.1rem;
         }
 
         .stars-image {
@@ -84,36 +85,49 @@
   }
 
   .carousel-container {
+    width: 100%;
+
     .carrousel-item {
       width: 100%;
+      height: 300px;
       margin: auto;
       display: flex;
       align-items: center;
 
       .content {
+        display: flex;
+        flex-direction: column;
         width: 98%;
+        height: 100%;
         background-color: #dfdfdf71;
         backdrop-filter: blur(2px);
         border-radius: 10px;
         padding: 1.5rem;
         margin: 0 auto;
+        position: relative;
 
         .client-infos {
           display: flex;
+          align-items: center;
 
           .avatar {
+            margin-right: 0.5rem;
           }
 
           .name {
+            font-family: $f-quicksand-bold;
+            font-size: 1.1rem;
           }
         }
 
         .review-starts {
-          margin: 0.5rem 0;
+          margin: 0.5rem 0 1rem 0;
         }
 
         .review-text {
+          font-size: 1rem;
           line-height: 1.5rem;
+          font-family: $f-quicksand-medium;
         }
 
         .read-more {
@@ -122,6 +136,9 @@
           padding: 0;
           margin-top: 0.5rem;
           font-size: 1.1rem;
+          position: absolute;
+          left: 1.5rem;
+          bottom: 1.5rem;
         }
       }
     }
@@ -158,16 +175,10 @@
 
     .carousel-container {
       .carrousel-item {
+        height: 350px;
+
         .content {
           width: 99%;
-
-          .client-infos {
-            .avatar {
-            }
-
-            .name {
-            }
-          }
         }
       }
 
@@ -190,15 +201,7 @@
 
     .carousel-container {
       .carrousel-item {
-        .content {
-          .client-infos {
-            .avatar {
-            }
-
-            .name {
-            }
-          }
-        }
+        height: 280px;
       }
 
       .splide__arrow--prev {
@@ -222,15 +225,7 @@
 
     .carousel-container {
       .carrousel-item {
-        .content {
-          .client-infos {
-            .avatar {
-            }
-
-            .name {
-            }
-          }
-        }
+        height: 340px;
       }
 
       .splide__arrow--prev {
@@ -258,13 +253,18 @@
 
     .carousel-container {
       .carrousel-item {
+        height: 420px;
+
         .content {
           .client-infos {
-            .avatar {
-            }
-
             .name {
+              font-size: 1.3rem;
             }
+          }
+
+          .review-text {
+            font-size: 1.2rem;
+            line-height: 1.7rem;
           }
         }
       }
@@ -281,10 +281,31 @@
 }
 
 @media (min-width: 1399px) {
+  .carousel-reviews {
+    .carousel-container {
+      .carrousel-item {
+        height: 370px;
+      }
+    }
+  }
 }
 
 @media (min-width: 1599px) {
+  .carousel-reviews {
+    .carousel-container {
+      .carrousel-item {
+        height: 420px;
+      }
+    }
+  }
 }
 
 @media (min-width: 1920px) {
+  .carousel-reviews {
+    .carousel-container {
+      .carrousel-item {
+        height: 370px;
+      }
+    }
+  }
 }

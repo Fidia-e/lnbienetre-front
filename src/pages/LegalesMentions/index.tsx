@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 
-const LegalesMentions = () => {
+const LegalesMentions: FunctionComponent = () => {
 	return (
 		<div className="legales-container">
 			<h1 className="title">Mentions légales</h1>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -9,7 +9,7 @@ import Instagram from "components/SVG/Instagram";
 import Email from "components/SVG/Email";
 import Logo from "components/SVG/Logo";
 
-const Header = () => {
+const Header: FunctionComponent = () => {
 	const [fixed, setFixed] = useState(false);
 	const [isMenuVisible, setIsMenuVisible] = useState(false);
 	const [isChecked, setIsChecked] = useState(false);
