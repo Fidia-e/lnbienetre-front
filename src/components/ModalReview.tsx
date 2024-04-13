@@ -5,7 +5,6 @@ export interface MemberModalProps {
   text: string;
   classNameTextMore: string;
   setIsModalOpen: (isOpen: boolean) => void;
-  setModalId: (modalId: number) => void;
   nameMember: string;
 }
 

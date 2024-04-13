@@ -93,7 +93,6 @@ const ReviewsCarousel: FunctionComponent = () => {
 							key={review.id}
 							classNameTextMore="moretext"
 							setIsModalOpen={setIsModalOpen}
-							setModalId={setModalId}
 							text={review.more}
 							nameMember={review.name}
 						/>
