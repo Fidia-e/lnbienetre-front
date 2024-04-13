@@ -21,20 +21,18 @@
     margin: 2rem 0;
   }
 
-  .button {
-    font-family: $f-raleway-medium;
+  .all-reviews-button {
+    background-color: #4888f4;
+    color: $c-white;
+    font-family: $f-quicksand-semibold;
+    padding: 0.7rem 1.5rem;
     font-size: 1.1rem;
-    color: $c-cream;
-    background-color: $c-corail;
-    border: solid 1px $c-corail;
-    border-radius: 50px;
-    margin: 1rem 0 2rem 0;
-    padding: 1rem 2rem;
+    border-radius: 10px;
     transition: all 0.3s ease-in-out;
+    margin-top: 4rem;
 
     &:hover {
-      background-color: transparent;
-      color: $c-corail;
+      background-color: #1369fd;
     }
   }
 }

@@ -44,6 +44,9 @@ const Home: FunctionComponent = () => {
 	const locationURL =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1741859797926!2d2.7077966!3d48.835816099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61ba215a66fa1%3A0xa0a3b87d196a9fb0!2sLN%20Bien-Etre%20-%20Maderotherapie%2C%20drainage%20post-operatoire%20et%20Renata%2C%20ice%20madero!5e0!3m2!1sfr!2sfr!4v1709049186502!5m2!1sfr!2sfr";
 
+	const allReviews =
+    "https://www.google.com/search?sca_esv=626799e4d97bcf6a&sca_upv=1&hl=fr-FR&gl=fr&uds=AMwkrPszWx7LxVTfrqzi4Qx4Jvnh9dKRhi0PS7qxYcfF-XliAvtYCVgJhIzDSOPlOg1Qvhg6HTjdvl-TPZQyzkEUtE2lUGDiJgcpMR3eiv8gJF2-YwBEBYI9O4SzhVs95XonD59GVwpeYwCVH8V28h3zKE_wmb8t0ayGyIRi2Q_XpbbQxfmSlPG5M8gkqLwRmkosbXvgcB71phcE_18RMqEbpOgDjXJOmXfi78lrvMaasKi-tJk7zbBt8cYXCP12Ce2s0zx5WnksnpXpI7QTOV2qtJ220nyhiUvvFLSxq7b-F9vWPoI7_F6fH7HiDuzHXhCQwGv55z12&si=AKbGX_oXOTjHK3vNPxrwAU4tsC2W_rsdJDrrSHpqUAOdbOh1qw2dPap6Nx7aYdvRhNXI5Wxvu0rFSOSn6giHk9ZHmo4GNgUsW66cO30lBI418mdhrwl1faBImpYWkLxgXmUuUnLH4x6Immnk_awnEu_dFwEGo_7T9VJHDyylkmFyaPEtQ8QFb-G2r0MxP8fg74OzT3J7qisZSGVmXeEZQxEvel8jWnvJ9fUDp0BwNJ3dAn1ZlcHm4Bo%3D&q=H%C3%A9l%C3%A8ne+Bien-Etre+-+Maderotherapie,+drainage+post-operatoire+et+Renata,+ice+madero+Avis&sa=X&ved=2ahUKEwjF-6m29L-FAxX5RqQEHegaB04Q_4MLegQIPBAL&cshid=1713036043317578&biw=1728&bih=959&dpr=2";
+
 	const firstname = "prénom";
 	const email = "email";
 
@@ -420,6 +423,10 @@ const Home: FunctionComponent = () => {
 				<h3 className="title">Ce qu&apos;on dit de nous</h3>
 
 				<ReviewsCarousel />
+
+				<a href={allReviews} target="_blank" rel="noreferrer">
+					<button className="all-reviews-button">Voir tous les avis</button>
+				</a>
 			</section>
 
 			{/* //& ------------------------ AVANT / APRES ------------------------- &// */}
