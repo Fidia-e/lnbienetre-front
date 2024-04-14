@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import ScrollToTopButton from "components/ScrollToTop";
 import LegalesMentions from "pages/LegalesMentions";
 import "./styles/index.scss";
 
@@ -16,6 +17,7 @@ const App: FunctionComponent = () => {
 					<Route path="/" element={<Home />} />
 					<Route path="/mentions-légales" element={<LegalesMentions />} />
 				</Routes>
+				<ScrollToTopButton />
 				<Footer />
 			</BrowserRouter>
 		</div>

@@ -12,12 +12,11 @@ import Result6 from "assets/images/result-6.webp";
 const ResultsGallery: FunctionComponent = () => {
 	const widthScreen = window.innerWidth;
 
-	const [isOpen, setIsOpen] = useState(false);
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const [images, setImages] = useState([Result1, Result2, Result3, Result4, Result5, Result6]);
-	const [imageClicked, setImageClicked] = useState(0);
+	const [isOpen, setIsOpen] = useState<boolean>(false);
+	const [images] = useState<string[]>([Result1, Result2, Result3, Result4, Result5, Result6]);
+	const [imageClicked, setImageClicked] = useState<number>(0);
 
-	// bloquer et réactiver le scroll à l'ouverture et fermeture du menu mobile
+	// bloquer et réactiver le scroll à l'ouverture et fermeture de la modal
 	if (isOpen) {
 		document.body.style.overflowY = "hidden";
 	} else {

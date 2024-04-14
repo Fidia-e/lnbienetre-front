@@ -10,9 +10,9 @@ import Email from "components/SVG/Email";
 import Logo from "components/SVG/Logo";
 
 const Header: FunctionComponent = () => {
-	const [fixed, setFixed] = useState(false);
-	const [isMenuVisible, setIsMenuVisible] = useState(false);
-	const [isChecked, setIsChecked] = useState(false);
+	const [fixed, setFixed] = useState<boolean>(false);
+	const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
+	const [isChecked, setIsChecked] = useState<boolean>(false);
 
 	const screenWidth = window.innerWidth;
 	const screenHeight = window.innerHeight;
@@ -67,6 +67,7 @@ const Header: FunctionComponent = () => {
 	};
 
 	// fermer le menu et passer isChecked à false
+	// pour l'animation du burger
 	const handleNavigationVisibility = () => {
 		setIsMenuVisible(false);
 		setIsChecked(false);
