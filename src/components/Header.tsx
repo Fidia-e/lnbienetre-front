@@ -23,7 +23,7 @@ const Header: FunctionComponent = () => {
 		setFixed(isScrolledPastTheScreen);
 	};
 
-	//^ --------------------------------- SCROLL TO SECTION --------------------------------- ^//
+	//^ --------------------------------- SCROLL TO SECTIONS --------------------------------- ^//
 
 	const scrollWithOffsetTo50 = (e: HTMLElement) => {
 		const yCoordinate = e.getBoundingClientRect().top + window.scrollY;
@@ -72,24 +72,12 @@ const Header: FunctionComponent = () => {
 		setIsChecked(false);
 	};
 
-	// // bloquer et réactiver le scroll à l'ouverture et fermeture du menu mobile
-	// if (isMenuVisible === false) {
-	// 	document.body.style.overflowY = "hidden";
-	// } else {
-	// 	document.body.style.overflowY = "unset";
-	// }
-
-	// useEffect(() => {
-	// 	if (isMenuVisible) {
-	// 		// Ajouter la classe pour bloquer le scroll
-	// 		document.body.classList.add("menu-open");
-	// 		document.body.style.overflowY = "hidden";
-	// 	} else {
-	// 		// Retirer la classe pour réactiver le scroll
-	// 		document.body.classList.remove("menu-open");
-	// 		document.body.style.overflowY = "unset";
-	// 	}
-	// }, [isMenuVisible]);
+	// bloquer et réactiver le scroll à l'ouverture et fermeture du menu mobile
+	if (isMenuVisible) {
+		document.body.style.overflowY = "hidden";
+	} else {
+		document.body.style.overflowY = "unset";
+	}
 
 	useEffect(() => {
 		window.addEventListener("scroll", toggleVisible);
@@ -98,22 +86,6 @@ const Header: FunctionComponent = () => {
 			window.removeEventListener("scroll", toggleVisible);
 		};
 	}, []);
-
-	useEffect(() => {
-		const mainContent = document.getElementById("root");
-
-		if (isMenuVisible) {
-			document.body.classList.add("menu-open");
-			if (mainContent) {
-				mainContent.classList.add("menu-open");
-			}
-		} else {
-			document.body.classList.remove("menu-open");
-			if (mainContent) {
-				mainContent.classList.remove("menu-open");
-			}
-		}
-	}, [isMenuVisible]);
 
 	return screenWidth <= 1199 ? (
 		<header className={fixed ? "header-container header-container-fixed" : "header-container"}>

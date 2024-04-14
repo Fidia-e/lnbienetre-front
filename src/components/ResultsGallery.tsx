@@ -17,6 +17,13 @@ const ResultsGallery: FunctionComponent = () => {
 	const [images, setImages] = useState([Result1, Result2, Result3, Result4, Result5, Result6]);
 	const [imageClicked, setImageClicked] = useState(0);
 
+	// bloquer et réactiver le scroll à l'ouverture et fermeture du menu mobile
+	if (isOpen) {
+		document.body.style.overflowY = "hidden";
+	} else {
+		document.body.style.overflowY = "unset";
+	}
+
 	return (
 		<div className="carrousel-gallery">
 			<Splide

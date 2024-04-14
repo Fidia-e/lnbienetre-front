@@ -15,7 +15,7 @@ const ClientsReviews = [
     alt: "Avatar d'Emeline",
     review:
       "J'ai terminé une cure de 5 séances de madero et je suis ravie des résultats sur ma silhouette ! De plus Hélène est une praticienne très douce, ...",
-    more: "J'ai terminé une cure de 5 séances de madero et je suis ravie des résultats sur ma silhouette ! De plus Hélène est une praticienne très douce, à l'écoute et agréable. Ça a été un plaisir, je recommande à 100% ☺️",
+    more: "J'ai terminé une cure de 5 séances de madero et je suis ravie des résultats sur ma silhouette ! De plus Hélène est une praticienne très douce, à l'écoute et agréable. Ça a été un plaisir, je recommande à 100% 🙂",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const ClientsReviews = [
     name: 'Roxanne',
     alt: 'Avatar de Roxanne',
     review:
-      "Le soin Ice Mdéro ! 😱 c'est une “tuerie“. Soin minceur avec un résultat dès la 1er séance ! Je suis bluffée 😍 \nC'est un soin très agréable ...",
+      "Le soin Ice Madéro ! 😱 c'est une “tuerie“. Soin minceur avec un résultat dès la 1er séance ! Je suis bluffée 😍 \nC'est un soin très agréable ...",
     more: "Le soin Ice Mdéro ! 😱 c'est une “tuerie“. Soin minceur avec un résultat dès la 1er séance ! Je suis bluffée 😍 \n \nC'est un soin très agréable et qui détend. Pour ce qui aurait peur, ça ne fait pas mal et ce n'est pas gelé (comme on pourrait penser). C'est une légère sensation de fraîcheur qui est très plaisant.",
   },
   {
@@ -55,7 +55,7 @@ const ClientsReviews = [
     alt: 'Avatar de Yousra',
     review:
       "Hélène a des doigts de fée! J'ai fait une cure de drainage lymphatique avec Hélène suite à une liposuccion et je peux vous dire que je regrette de ne pas ...",
-    more: "Hélène a des doigts de fée! J'ai fait une cure de drainage lymphatique avec Hélène suite à une liposuccion et je peux vous dire que je regrette de ne pas être passé entre ses mains avant tellement le résultat et le bien être était immédiat des la première séance. \nHélène est une vraie professionnele et passionné par ce qu'elle fait, j'ai d'ailleurs enchaîné sur une cure de madero. \nDe plus (et pas des moindres), c'est une personne très sympatique et agréable. \nJe la recommande les yeux fermés pourtant je suis une personne plutôt exigeante. Mille merci Hélène pour le bien être que vous m'apportez chaque semaine!",
+    more: "Hélène a des doigts de fée! J'ai fait une cure de drainage lymphatique avec Hélène suite à une liposuccion et je peux vous dire que je regrette de ne pas être passé entre ses mains avant tellement le résultat et le bien être était immédiat des la première séance. \nHélène est une vraie professionnelle et passionné par ce qu'elle fait, j'ai d'ailleurs enchaîné sur une cure de madero. \nDe plus (et pas des moindres), c'est une personne très sympatique et agréable. \nJe la recommande les yeux fermés pourtant je suis une personne plutôt exigeante. Mille merci Hélène pour le bien être que vous m'apportez chaque semaine!",
   },
 ];
 

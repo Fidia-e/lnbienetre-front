@@ -1,7 +1,6 @@
 html {
   min-width: 100vw;
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
@@ -19,8 +18,4 @@ body {
 ::selection {
   background-color: $c-corail;
   color: $c-white;
-}
-
-.menu-open {
-  overflow-y: hidden !important;
 }

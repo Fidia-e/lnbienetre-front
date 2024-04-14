@@ -33,6 +33,13 @@ const ReviewsCarousel: FunctionComponent = () => {
 		setIsModalOpen(!isModalOpen);
 	};
 
+	// bloquer et réactiver le scroll à l'ouverture et fermeture du menu mobile
+	if (isModalOpen) {
+		document.body.style.overflowY = "hidden";
+	} else {
+		document.body.style.overflowY = "unset";
+	}
+
 	return (
 		<>
 			<div className="carousel-reviews">

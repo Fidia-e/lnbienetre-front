@@ -106,6 +106,7 @@
     display: flex;
     transform: translateX(100%);
     z-index: -1;
+    overflow-x: hidden;
   }
 
   .nav-list-active {
@@ -124,6 +125,7 @@
     line-height: 2.5rem;
     transition: transform ease-in-out 0.7s;
     z-index: 999;
+    overflow-x: hidden;
 
     .nav-item {
       width: auto;
