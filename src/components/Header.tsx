@@ -13,6 +13,7 @@ const Header: FunctionComponent = () => {
 	const [fixed, setFixed] = useState<boolean>(false);
 	const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
 	const [isChecked, setIsChecked] = useState<boolean>(false);
+	const { pathname } = useLocation();
 
 	const screenWidth = window.innerWidth;
 	const screenHeight = window.innerHeight;
@@ -21,6 +22,10 @@ const Header: FunctionComponent = () => {
 		const scrollPosition = window.scrollY;
 		const isScrolledPastTheScreen = scrollPosition > screenHeight;
 		setFixed(isScrolledPastTheScreen);
+
+		if (pathname !== "/") {
+			setFixed(true);
+		}
 	};
 
 	//^ --------------------------------- SCROLL TO SECTIONS --------------------------------- ^//
@@ -89,7 +94,15 @@ const Header: FunctionComponent = () => {
 	}, []);
 
 	return screenWidth <= 1199 ? (
-		<header className={fixed ? "header-container header-container-fixed" : "header-container"}>
+		<header
+			className={
+				fixed
+					? "header-container header-container-fixed"
+					: pathname !== "/"
+						? "header-container header-container-fixed"
+						: "header-container"
+			}
+		>
 			<div className="navigation">
 				<NavLink to="/" className="logo-container" onClick={() => toggleHomeLink()}>
 					<div className="logo-imageCtn">
@@ -213,7 +226,15 @@ const Header: FunctionComponent = () => {
 			</ul>
 		</header>
 	) : (
-		<header className={fixed ? "header-desktop-container header-displayed" : "header-desktop-container header-hidden"}>
+		<header
+			className={
+				fixed
+					? "header-desktop-container header-displayed"
+					: pathname !== "/"
+						? "header-desktop-container header-displayed"
+						: "header-desktop-container header-hidden"
+			}
+		>
 			<div className="icons-container">
 				<a href="https://www.facebook.com/lnbienetre" target="_blank" rel="noreferrer">
 					<Facebook className="icon facebook" width={40} height={40} />
@@ -292,7 +313,7 @@ const Header: FunctionComponent = () => {
 							smooth
 							to="/#avis"
 							onClick={() => handleNavigationVisibility()}
-							scroll={el => scrollWithOffsetTo150(el)}
+							scroll={el => scrollWithOffsetTo100(el)}
 						>
               Avis
 						</HashLink>
@@ -303,7 +324,7 @@ const Header: FunctionComponent = () => {
 							smooth
 							to="/#avant-après"
 							onClick={() => handleNavigationVisibility()}
-							scroll={el => scrollWithOffsetTo100(el)}
+							scroll={el => scrollWithOffsetTo150(el)}
 						>
               Avant / Après
 						</HashLink>

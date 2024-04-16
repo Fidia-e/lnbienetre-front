@@ -46,6 +46,7 @@
         font-size: 1rem;
         margin: 1rem 0;
         line-height: 1.5rem;
+        font-family: $f-quicksand-regular;
       }
 
       .service-price {
@@ -119,7 +120,6 @@
 @media (min-width: 1024px) {
   .services {
     .service {
-      width: 80%;
       flex-direction: row;
       justify-content: space-between;
 

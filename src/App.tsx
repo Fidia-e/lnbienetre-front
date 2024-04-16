@@ -6,6 +6,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import ScrollToTopButton from "components/ScrollToTop";
 import LegalesMentions from "pages/LegalesMentions";
+import Blog from "pages/Blog";
 import "./styles/index.scss";
 
 const App: FunctionComponent = () => {
@@ -16,6 +17,7 @@ const App: FunctionComponent = () => {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/mentions-légales" element={<LegalesMentions />} />
+					<Route path="/blog" element={<Blog />} />
 				</Routes>
 				<ScrollToTopButton />
 				<Footer />

@@ -124,7 +124,7 @@
     right: 0;
     line-height: 2.5rem;
     transition: transform ease-in-out 0.7s;
-    z-index: 999;
+    z-index: 999999999;
     overflow-x: hidden;
 
     .nav-item {
@@ -152,7 +152,7 @@
   position: fixed;
   transform: translateY(0px);
   transition: transform ease-in-out 0.5s;
-  box-shadow: 0px 1px 10px $c-black;
+  box-shadow: 0px 0px 10px $c-black;
 
   .navigation {
     height: 100%;

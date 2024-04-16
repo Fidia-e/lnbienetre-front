@@ -121,10 +121,10 @@ const Home: FunctionComponent = () => {
 	useEffect(() => {
 		document.title = "Hélène Bien-Être - Maderothérapie, Drainage post-opératoire et Renata, Ice Madero - Accueil";
 
-		// window.scrollTo({
-		// 	top: 0,
-		// 	behavior: "smooth",
-		// });
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
 	}, []);
 
 	return (

@@ -16,12 +16,11 @@ import MemberModal from "components/ModalReview";
 const ReviewsCarousel: FunctionComponent = () => {
 	const widthScreen = window.innerWidth;
 	const avatars: string[] = [C, E, N, T, J, R, Y];
+	const [modalId, setModalId] = useState<number>(0);
+	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
 	const addReview =
     "https://www.google.com/search?hl=fr-FR&gl=fr&q=H%C3%A9l%C3%A8ne+Bien-Etre+-+Maderotherapie,+drainage+post-operatoire+et+Renata,+ice+madero,+Interphone+:+Sant%C3%A9+MK,+9+Bd+Pierre+Mend%C3%A8s+France,+77600+Bussy-Saint-Georges&ludocid=11575298314709147568&lsig=AB86z5XLuS5GNTVz9BCWgZe-4Tdq#lrd=0x47e61ba215a66fa1:0xa0a3b87d196a9fb0,3";
-
-	const [modalId, setModalId] = useState<number>(0);
-	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
 	const handleClick = (id: number) => {
 		if (!!isModalOpen !== false) {
@@ -78,7 +77,7 @@ const ReviewsCarousel: FunctionComponent = () => {
 										<img key={index} className="avatar" src={avatars[index]} alt={review.alt} width={45} height={45} />
 										<h4 className="name">{review.name}</h4>
 									</div>
-									<img className="review-starts" src={Stars} alt="" width={100} />
+									<img className="review-starts" src={Stars} alt="étoiles de la note" width={100} />
 									<p className="review-text" style={{ whiteSpace: "pre-wrap" }} onClick={() => handleClick(review.id)}>
 										{review.review}
 									</p>
