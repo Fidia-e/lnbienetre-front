@@ -78,14 +78,6 @@
         padding: 25px 0;
       }
     }
-
-    .modal-close {
-      font-size: 1.5rem;
-
-      .span-close {
-        font-size: 1.5rem;
-      }
-    }
   }
 }
 
@@ -112,12 +104,12 @@
     }
 
     .modal-close {
-      font-size: 2rem;
       top: 2rem;
       right: 3rem;
+      font-size: 1.5rem;
 
       .span-close {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
   }

@@ -19,13 +19,13 @@ import Instagram from "components/SVG/Instagram";
 import Email from "components/SVG/Email";
 import Gift from "components/SVG/Gift";
 import Chevron from "components/SVG/Chevron";
-import Google from "assets/images/google-pink.webp";
-import PostOp from "assets/images/post-op.webp";
-import Renata from "assets/images/renata.webp";
-import Madero from "assets/images/madero.webp";
-import Ice from "assets/images/ice.webp";
-import Galber from "assets/images/galber.webp";
-import Helene from "assets/images/helene.webp";
+import Google from "assets/images/WEBP/google-pink.webp";
+import PostOp from "assets/images/WEBP/post-op.webp";
+import Renata from "assets/images/WEBP/renata.webp";
+import Madero from "assets/images/WEBP/madero.webp";
+import Ice from "assets/images/WEBP/ice.webp";
+import Galber from "assets/images/WEBP/galber.webp";
+import Helene from "assets/images/WEBP/helene.webp";
 
 import ResultsGallery from "components/ResultsGallery";
 import ReviewsCarousel from "components/ReviewsCarousel";
@@ -40,6 +40,7 @@ const Home: FunctionComponent = () => {
 	const form = useRef<HTMLFormElement>(null);
 	const inputChild = useRef(null);
 	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
 	const locationURL =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1741859797926!2d2.7077966!3d48.835816099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61ba215a66fa1%3A0xa0a3b87d196a9fb0!2sLN%20Bien-Etre%20-%20Maderotherapie%2C%20drainage%20post-operatoire%20et%20Renata%2C%20ice%20madero!5e0!3m2!1sfr!2sfr!4v1709049186502!5m2!1sfr!2sfr";
@@ -81,10 +82,10 @@ const Home: FunctionComponent = () => {
 	AnimatedInput.propTypes = {
 		placeholder: PropTypes.string,
 	};
+
 	AnimatedInput.displayName = "AnimatedInput";
 
 	//^ -------------------------------------------------------------------------------------------------------------------- ^//
-
 	//^ -------------------------------------------------- FORM HANDLING -------------------------------------------------- ^//
 
 	const {
@@ -105,26 +106,31 @@ const Home: FunctionComponent = () => {
 
 		emailjs.sendForm(serviceId, templateId, formRef, apiKey).then(
 			() => {
-				// console.log('YEP !', response.status, response.text);
 				setIsSubmitted(true);
 			},
 			() => {
-				// console.log('NOPE ...', error);
 				setIsSubmitted(false);
 			}
 		);
+
 		reset();
 	};
 
 	//^ -------------------------------------------------------------------------------------------------------------------- ^//
 
+	const handleReviewAreaClick = () => {
+		if (isModalOpen) {
+			setIsModalOpen(false);
+		}
+	};
+
 	useEffect(() => {
 		document.title = "Hélène Bien-Être - Maderothérapie, Drainage post-opératoire et Renata, Ice Madero - Accueil";
 
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
+		// window.scrollTo({
+		// 	top: 0,
+		// 	behavior: "smooth",
+		// });
 	}, []);
 
 	return (
@@ -150,11 +156,7 @@ const Home: FunctionComponent = () => {
 						<Logo className="logo" color="#faf2e9" width={120} height={120} />
 					</div>
 					<div className="google-container">
-						<a
-							href="https://www.google.com/search?sca_esv=72ff9969706166be&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCupz22t2q970qFkC0TyWMZNbWfb9xzDtJD1k5k2KyB7DpOSXrMNLvXfJW3TlysoxKz1djDKW5lAuzBD_MIRNUgZ-Z-uOZxA7FnXd88m1kJCzv8n5JJ&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9Sf2X-1Wvr63GIerjMoMTeh9Vjiq75ndlkYsn94Ediln06ahfeA%3D&q=LN+Bien-Etre+-+Maderotherapie,+drainage+post-operatoire+et+Renata,+ice+madero+Avis&sa=X&ved=2ahUKEwiN0tH8gcWEAxWjVaQEHflzDyQQ3PALegQIShAF&biw=1920&bih=959&dpr=1"
-							target="_blank"
-							rel="noreferrer"
-						>
+						<a href={allReviews} target="_blank" rel="noreferrer">
 							<img className="google" src={Google} alt="Note Google" width={200} height="auto" />
 						</a>
 					</div>
@@ -419,10 +421,10 @@ const Home: FunctionComponent = () => {
 			</section>
 
 			{/* //& ----------------------------- AVIS ----------------------------- &// */}
-			<section className="reviews" id="avis">
+			<section className="reviews" id="avis" onClick={handleReviewAreaClick}>
 				<h3 className="title">Ce qu&apos;on dit de nous</h3>
 
-				<ReviewsCarousel />
+				<ReviewsCarousel isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
 
 				<a href={allReviews} target="_blank" rel="noreferrer">
 					<button className="all-reviews-button">Voir tous les avis</button>
@@ -486,11 +488,7 @@ const Home: FunctionComponent = () => {
 								</div>
 
 								<div className="textarea-content">
-									<AnimatedInput
-										placeholder="Bonjour, ..."
-										{...register("message", { required: false })}
-										ref={inputChild}
-									/>
+									<AnimatedInput placeholder="Bonjour, ..." ref={inputChild} />
 								</div>
 								<button className="button">Envoyer</button>
 							</form>

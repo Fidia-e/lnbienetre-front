@@ -9,9 +9,20 @@
     background-color: transparent;
 
     .icon {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       transform: rotate(-90deg);
+      transition: all ease-in-out 0.3s;
+      background-color: $c-corail;
+      border-radius: 50%;
+      border: $c-corail 1px solid;
+      padding: 0.4rem;
+      fill: $c-cream;
+
+      &:hover {
+        background-color: $c-cream;
+        fill: $c-corail;
+      }
     }
   }
 }
@@ -38,8 +49,9 @@
 
     .scrollToTopBtn {
       .icon {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
+        padding: 0.5rem;
       }
     }
   }

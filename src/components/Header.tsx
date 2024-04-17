@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-import TinyLogo from "assets/images/tiny-logo.webp";
+import TinyLogo from "assets/images/WEBP/tiny-logo.webp";
 import Facebook from "components/SVG/Facebook";
 import Phone from "components/SVG/Phone";
 import Instagram from "components/SVG/Instagram";
@@ -22,23 +22,19 @@ const Header: FunctionComponent = () => {
 		const scrollPosition = window.scrollY;
 		const isScrolledPastTheScreen = scrollPosition > screenHeight;
 		setFixed(isScrolledPastTheScreen);
-
-		if (pathname !== "/") {
-			setFixed(true);
-		}
 	};
 
 	//^ --------------------------------- SCROLL TO SECTIONS --------------------------------- ^//
 
-	const scrollWithOffsetTo50 = (e: HTMLElement) => {
+	const scrollWithOffsetTo30 = (e: HTMLElement) => {
 		const yCoordinate = e.getBoundingClientRect().top + window.scrollY;
-		const yOffset = -50;
+		const yOffset = -30;
 		window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
 	};
 
-	const scrollWithOffsetTo70 = (e: HTMLElement) => {
+	const scrollWithOffsetTo50 = (e: HTMLElement) => {
 		const yCoordinate = e.getBoundingClientRect().top + window.scrollY;
-		const yOffset = -70;
+		const yOffset = -50;
 		window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
 	};
 
@@ -190,7 +186,7 @@ const Header: FunctionComponent = () => {
 						smooth
 						to="/#avis"
 						onClick={() => handleNavigationVisibility()}
-						scroll={el => scrollWithOffsetTo70(el)}
+						scroll={el => scrollWithOffsetTo30(el)}
 					>
             Avis
 					</HashLink>

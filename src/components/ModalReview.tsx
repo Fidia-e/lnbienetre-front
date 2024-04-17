@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from "react";
 import { motion } from "framer-motion";
 
-export interface MemberModalProps {
+interface MemberModalProps {
   text: string;
   classNameTextMore: string;
-  setIsModalOpen: (isOpen: boolean) => void;
+  setIsModalOpen: (value: boolean) => void;
   nameMember: string;
 }
 

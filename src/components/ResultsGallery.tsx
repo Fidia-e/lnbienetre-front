@@ -2,12 +2,12 @@ import React, { FunctionComponent, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Lightbox from "react-18-image-lightbox";
 
-import Result1 from "assets/images/result-1.webp";
-import Result2 from "assets/images/result-2.webp";
-import Result3 from "assets/images/result-3.webp";
-import Result4 from "assets/images/result-4.webp";
-import Result5 from "assets/images/result-5.webp";
-import Result6 from "assets/images/result-6.webp";
+import Result1 from "assets/images/WEBP/result-1.webp";
+import Result2 from "assets/images/WEBP/result-2.webp";
+import Result3 from "assets/images/WEBP/result-3.webp";
+import Result4 from "assets/images/WEBP/result-4.webp";
+import Result5 from "assets/images/WEBP/result-5.webp";
+import Result6 from "assets/images/WEBP/result-6.webp";
 
 const ResultsGallery: FunctionComponent = () => {
 	const widthScreen = window.innerWidth;

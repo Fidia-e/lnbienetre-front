@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from "react";
 
-import Arrow from "assets/images/SVG/arrow.svg";
+import Arrow from "components/SVG/Arrow";
 
 const ScrollToTopButton: FunctionComponent = () => {
 	const [visible, setVisible] = useState<boolean>(false);
@@ -32,7 +32,8 @@ const ScrollToTopButton: FunctionComponent = () => {
 	return (
 		<div className="scrollToTop-container" style={{ display: visible ? "inline" : "none" }}>
 			<button className="scrollToTopBtn" onClick={scrollToTop}>
-				<img className="icon" src={Arrow} width={40} height={40} />
+				{/* <img className="icon" src={Arrow} width={40} height={40} /> */}
+				<Arrow className="icon facebook" width={20} height={20} />
 			</button>
 		</div>
 	);
