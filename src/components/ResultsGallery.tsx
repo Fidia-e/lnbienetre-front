@@ -17,9 +17,15 @@ const ResultsGallery: FunctionComponent = () => {
 	const [imageClicked, setImageClicked] = useState<number>(0);
 
 	// bloquer et réactiver le scroll à l'ouverture et fermeture de la modal
+	// et gérer le z-index du header
 	useEffect(() => {
 		if (document) {
 			document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+		}
+
+		const header = document.querySelector("header");
+		if (header) {
+			header.style.zIndex = isModalOpen ? "0" : "99999";
 		}
 	}, [isModalOpen]);
 
