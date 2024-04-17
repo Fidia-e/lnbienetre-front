@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Lightbox from "react-18-image-lightbox";
 
@@ -12,16 +12,16 @@ import Result6 from "assets/images/WEBP/result-6.webp";
 const ResultsGallery: FunctionComponent = () => {
 	const widthScreen = window.innerWidth;
 
-	const [isOpen, setIsOpen] = useState<boolean>(false);
+	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 	const [images] = useState<string[]>([Result1, Result2, Result3, Result4, Result5, Result6]);
 	const [imageClicked, setImageClicked] = useState<number>(0);
 
 	// bloquer et réactiver le scroll à l'ouverture et fermeture de la modal
-	if (isOpen) {
-		document.body.style.overflowY = "hidden";
-	} else {
-		document.body.style.overflowY = "unset";
-	}
+	useEffect(() => {
+		if (document) {
+			document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+		}
+	}, [isModalOpen]);
 
 	return (
 		<div className="carrousel-gallery">
@@ -38,7 +38,7 @@ const ResultsGallery: FunctionComponent = () => {
 							src={image}
 							alt={`result-${index + 1}`}
 							onClick={() => {
-								setIsOpen(true);
+								setIsModalOpen(true);
 								setImageClicked(index);
 							}}
 							width={300}
@@ -47,12 +47,12 @@ const ResultsGallery: FunctionComponent = () => {
 					</SplideSlide>
 				))}
 			</Splide>
-			{isOpen && (
+			{isModalOpen && (
 				<Lightbox
 					mainSrc={images[imageClicked]}
 					nextSrc={images[(imageClicked + 1) % images.length]}
 					prevSrc={images[(imageClicked + images.length - 1) % images.length]}
-					onCloseRequest={() => setIsOpen(false)}
+					onCloseRequest={() => setIsModalOpen(false)}
 					onMovePrevRequest={() => setImageClicked((imageClicked + images.length - 1) % images.length)}
 					onMoveNextRequest={() => setImageClicked((imageClicked + 1) % images.length)}
 				/>

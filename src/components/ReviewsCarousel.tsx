@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import ClientsReviews from "utils/reviews";
@@ -37,11 +37,11 @@ const ReviewsCarousel: FunctionComponent<ReviewProps> = ({ isModalOpen, setIsMod
 	};
 
 	// bloquer et réactiver le scroll à l'ouverture et fermeture de la modal
-	if (isModalOpen) {
-		document.body.style.overflowY = "hidden";
-	} else {
-		document.body.style.overflowY = "unset";
-	}
+	useEffect(() => {
+		if (document) {
+			document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+		}
+	}, [isModalOpen]);
 
 	return (
 		<>

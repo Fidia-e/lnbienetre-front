@@ -75,11 +75,11 @@ const Header: FunctionComponent = () => {
 	};
 
 	// bloquer et réactiver le scroll à l'ouverture et fermeture du menu mobile
-	if (isMenuVisible) {
-		document.body.style.overflowY = "hidden";
-	} else {
-		document.body.style.overflowY = "unset";
-	}
+	useEffect(() => {
+		if (document) {
+			document.body.style.overflow = isMenuVisible ? "hidden" : "auto";
+		}
+	}, [isMenuVisible]);
 
 	useEffect(() => {
 		window.addEventListener("scroll", toggleVisible);
