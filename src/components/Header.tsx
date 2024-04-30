@@ -117,7 +117,7 @@ const Header: FunctionComponent = () => {
 						<a href="tel:+33749813989">
 							<Phone className="icon phone" width={30} height={30} />
 						</a>
-						<a href="mailto:bonjour@lnbienetre.com">
+						<a href="mailto:lnbienetre77@gmail.com">
 							<Email className="icon email" width={30} height={30} />
 						</a>
 					</div>
@@ -241,7 +241,7 @@ const Header: FunctionComponent = () => {
 				<a href="tel:+33749813989">
 					<Phone className="icon phone" width={40} height={40} />
 				</a>
-				<a href="mailto:bonjour@lnbienetre.com">
+				<a href="mailto:lnbienetre77@gmail.com">
 					<Email className="icon email" width={40} height={40} />
 				</a>
 			</div>

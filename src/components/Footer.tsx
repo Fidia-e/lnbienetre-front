@@ -27,7 +27,7 @@ const Footer: FunctionComponent = () => {
 								<a href="tel:+33749813989">
 									<Phone className="icon phone" color="#e6726a" width={40} height={40} />
 								</a>
-								<a href="mailto:bonjour@lnbienetre.com">
+								<a href="mailto:lnbienetre77@gmail.com">
 									<Email className="icon email" color="#e6726a" width={40} height={40} />
 								</a>
 							</div>
@@ -48,8 +48,8 @@ const Footer: FunctionComponent = () => {
 						</p>
 						<p className="block">à 2 min à pied du RER A</p>
 						<br />
-						<a className="bold" href="mailto:bonjour@lnbienetre.com">
-              bonjour@lnbienetre.com
+						<a className="bold" href="mailto:lnbienetre77@gmail.com">
+              lnbienetre77@gmail.com
 						</a>{" "}
 						<br />
 						<a className="bold" href="tel:+33749813989">
@@ -67,7 +67,6 @@ const Footer: FunctionComponent = () => {
 						</div>
 					</div>
 				</div>
-				{/* <img className="legs" src={Legs} alt="Jambes de femmes" width={400} height={250} /> */}
 			</div>
 			<div className="credit">
 				<p>

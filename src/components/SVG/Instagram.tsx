@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from "react";
 
-interface FacebookProps {
+interface InstagramProps {
   width: number;
   height: number;
   className?: string;
   color?: string;
 }
 
-const Instagram: FunctionComponent<FacebookProps> = ({ className, color, width, height }: FacebookProps) => {
+const Instagram: FunctionComponent<InstagramProps> = ({ className, color, width, height }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

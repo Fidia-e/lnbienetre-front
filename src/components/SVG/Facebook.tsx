@@ -7,7 +7,7 @@ export interface FacebookProps {
   color?: string;
 }
 
-const Facebook: FunctionComponent<FacebookProps> = ({ className, color, width, height }: FacebookProps) => {
+const Facebook: FunctionComponent<FacebookProps> = ({ className, color, width, height }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

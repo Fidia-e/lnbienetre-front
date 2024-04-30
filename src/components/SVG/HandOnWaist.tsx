@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from "react";
 
-export interface FacebookProps {
+export interface HandOnWaistProps {
   width: number;
   height: number;
   className?: string;
   color?: string;
 }
 
-const HandOnWaist: FunctionComponent<FacebookProps> = ({ className, color, width, height }: FacebookProps) => {
+const HandOnWaist: FunctionComponent<HandOnWaistProps> = ({ className, color, width, height }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from "react";
 
-export interface FacebookProps {
+export interface EmailProps {
   width: number;
   height: number;
   className?: string;
   color?: string;
 }
 
-const Email: FunctionComponent<FacebookProps> = ({ className, color, width, height }: FacebookProps) => {
+const Email: FunctionComponent<EmailProps> = ({ className, color, width, height }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

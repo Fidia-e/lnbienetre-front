@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from "react";
 
 export interface LogoProps {
-	width: number;
-	height: number;
-	className?: string;
-	color?: string;
+  width: number;
+  height: number;
+  className?: string;
+  color?: string;
 }
 
-const Logo: FunctionComponent<LogoProps> = ({ className, color, width, height }: LogoProps) => {
+const Logo: FunctionComponent<LogoProps> = ({ className, color, width, height }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

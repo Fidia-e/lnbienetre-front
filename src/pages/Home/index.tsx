@@ -134,7 +134,7 @@ const Home: FunctionComponent = () => {
 	}, []);
 
 	return (
-		<div className="homeContainer">
+		<div className="homeContainer" onClick={handleReviewAreaClick}>
 			{/* //& ---------------------------- ACCUEIL --------------------------- &// */}
 			<section className="hero" id="accueil">
 				<div className="header">
@@ -148,7 +148,7 @@ const Home: FunctionComponent = () => {
 						<a href="tel:+33749813989">
 							<Phone className="icon phone" width={40} height={40} />
 						</a>
-						<a href="mailto:bonjour@lnbienetre.com">
+						<a href="mailto:lnbienetre77@gmail.com">
 							<Email className="icon email" width={40} height={40} />
 						</a>
 					</div>
@@ -421,7 +421,7 @@ const Home: FunctionComponent = () => {
 			</section>
 
 			{/* //& ----------------------------- AVIS ----------------------------- &// */}
-			<section className="reviews" id="avis" onClick={handleReviewAreaClick}>
+			<section className="reviews" id="avis">
 				<h3 className="title">Ce qu&apos;on dit de nous</h3>
 
 				<ReviewsCarousel isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
@@ -455,7 +455,7 @@ const Home: FunctionComponent = () => {
 						<>
 							<div className="confirmation-message">
 								<p>Votre message à bien été envoyé !</p>
-								<p>Merci beaucoup de nous avoir contactés !</p>
+								<p>Merci beaucoup de nous avoir contacté !</p>
 								<p>Nous reviendrons vers vous très prochainement. </p>
 							</div>
 						</>

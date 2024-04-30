@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from "react";
 
-export interface FacebookProps {
+export interface ArrowProps {
   width: number;
   height: number;
   className?: string;
   color?: string;
 }
 
-const Arrow: FunctionComponent<FacebookProps> = ({ className, color, width, height }: FacebookProps) => {
+const Arrow: FunctionComponent<ArrowProps> = ({ className, color, width, height }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
