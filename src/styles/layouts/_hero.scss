@@ -82,6 +82,15 @@
       border: solid 1px $c-corail;
     }
   }
+
+  .chevron {
+    fill: $c-cream;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      fill: $c-corail;
+    }
+  }
 }
 
 @media (min-width: 414px) {

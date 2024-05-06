@@ -125,6 +125,15 @@ const Home: FunctionComponent = () => {
 		}
 	};
 
+	const handleScrollViewHeight = () => {
+		const screenHeight = window.innerHeight;
+
+		window.scrollTo({
+			top: screenHeight,
+			behavior: "smooth",
+		});
+	};
+
 	useEffect(() => {
 		document.title = "Hélène Bien-Être - Maderothérapie, Drainage post-opératoire et Renata, Ice Madero - Accueil";
 
@@ -176,7 +185,7 @@ const Home: FunctionComponent = () => {
 
 				<ReservationButton text="Prendre rendez-vous" />
 
-				<Chevron color="#faf2e9" width={25} height={25} />
+				<Chevron className="chevron" width={25} height={25} onClick={handleScrollViewHeight} />
 			</section>
 
 			{/* //& --------------------------- SERVICES --------------------------- &// */}

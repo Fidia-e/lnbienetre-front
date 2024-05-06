@@ -5,9 +5,10 @@ export interface ChevronProps {
   height: number;
   className?: string;
   color?: string;
+  onClick?: () => void;
 }
 
-const Chevron: FunctionComponent<ChevronProps> = ({ className, color, width, height }) => {
+const Chevron: FunctionComponent<ChevronProps> = ({ className, color, width, height, onClick }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -18,6 +19,7 @@ const Chevron: FunctionComponent<ChevronProps> = ({ className, color, width, hei
 			preserveAspectRatio="xMidYMid meet"
 			version="1.0"
 			className={className}
+			onClick={onClick}
 		>
 			<defs>
 				<clipPath id="37ee453491">
