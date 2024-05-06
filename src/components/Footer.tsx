@@ -6,6 +6,7 @@ import Instagram from "./SVG/Instagram";
 import Phone from "./SVG/Phone";
 import Email from "./SVG/Email";
 import Logo from "./SVG/Logo";
+import ReservationButton from "./ReservationButton";
 
 const Footer: FunctionComponent = () => {
 	const year = new Date();
@@ -16,7 +17,7 @@ const Footer: FunctionComponent = () => {
 				<div className="content">
 					<div>
 						<div className="contentCtn">
-							<button className="button">Réserver dès maintenant</button>
+							<ReservationButton text="Réserver dès maintenant" />
 							<div className="footer-icons">
 								<a href="https://www.facebook.com/lnbienetre" target="_blank" rel="noreferrer">
 									<Facebook className="icon facebook" color="#e6726a" width={40} height={40} />

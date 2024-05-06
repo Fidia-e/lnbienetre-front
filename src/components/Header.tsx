@@ -8,6 +8,7 @@ import Phone from "components/SVG/Phone";
 import Instagram from "components/SVG/Instagram";
 import Email from "components/SVG/Email";
 import Logo from "components/SVG/Logo";
+import ReservationButton from "./ReservationButton";
 
 const Header: FunctionComponent = () => {
 	const [fixed, setFixed] = useState<boolean>(false);
@@ -345,11 +346,7 @@ const Header: FunctionComponent = () => {
 				</ul>
 			</div>
 
-			<div className="button-container">
-				<a href="" target="_blank" rel="noreferrer">
-					<button className="button">Réserver</button>
-				</a>
-			</div>
+			<ReservationButton text="Réserver" />
 		</header>
 	);
 };

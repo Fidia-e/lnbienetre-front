@@ -29,6 +29,7 @@ import Helene from "assets/images/WEBP/helene.webp";
 
 import ResultsGallery from "components/ResultsGallery";
 import ReviewsCarousel from "components/ReviewsCarousel";
+import ReservationButton from "components/ReservationButton";
 
 interface AnimatedInputProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   placeholder?: string;
@@ -127,10 +128,10 @@ const Home: FunctionComponent = () => {
 	useEffect(() => {
 		document.title = "Hélène Bien-Être - Maderothérapie, Drainage post-opératoire et Renata, Ice Madero - Accueil";
 
-		// window.scrollTo({
-		// 	top: 0,
-		// 	behavior: "smooth",
-		// });
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
 	}, []);
 
 	return (
@@ -173,11 +174,7 @@ const Home: FunctionComponent = () => {
 					<span>Ice Madéro</span>
 				</h1>
 
-				<div className="button-container">
-					<a href="" target="_blank" rel="noreferrer">
-						<button className="button">Prendre rendez-vous</button>
-					</a>
-				</div>
+				<ReservationButton text="Prendre rendez-vous" />
 
 				<Chevron color="#faf2e9" width={25} height={25} />
 			</section>
@@ -199,7 +196,7 @@ const Home: FunctionComponent = () => {
               Un bon suivi post-opératoire détermine à 50% le résultat final de l&apos;intervention.
 						</p>
 						<span className="service-price">Tarif : à partir de 82 € (en cure ou à l’unité)</span>
-						<button className="button">Je prends rendez-vous</button>
+						<ReservationButton text="Je prendre rendez-vous" />
 					</div>
 					<img className="service-image" src={PostOp} alt="Drainage post-opératoire" width={280} height="auto" />
 				</div>
@@ -214,7 +211,7 @@ const Home: FunctionComponent = () => {
               lors de votre 1ère séance pour aborder ensemble vos objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 62 € (en cure ou à l’unité)</span>
-						<button className="button">Je prends rendez-vous</button>
+						<ReservationButton text="Je prendre rendez-vous" />
 					</div>
 					<img className="service-image" src={Renata} alt="Drainage renata" width={280} height="auto" />
 				</div>
@@ -228,7 +225,7 @@ const Home: FunctionComponent = () => {
               Un diagnostic personnalisé sera offert lors de votre 1ère séance pour aborder ensemble vos objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 53 € (en cure ou à l’unité)</span>
-						<button className="button">Je prends rendez-vous</button>
+						<ReservationButton text="Je prendre rendez-vous" />
 					</div>
 					<img className="service-image" src={Madero} alt="Madéréthérapie" width={280} height="auto" />
 				</div>
@@ -243,7 +240,7 @@ const Home: FunctionComponent = () => {
               votre 1ère séance pour aborder ensemble vos objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 74 € (en cure ou à l’unité)</span>
-						<button className="button">Je prends rendez-vous</button>
+						<ReservationButton text="Je prendre rendez-vous" />
 					</div>
 					<img className="service-image" src={Ice} alt="Ice madéro" width={280} height="auto" />
 				</div>
@@ -261,7 +258,7 @@ const Home: FunctionComponent = () => {
               objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 67 € (en cure ou à l’unité)</span>
-						<button className="button">Je prends rendez-vous</button>
+						<ReservationButton text="Je prendre rendez-vous" />
 					</div>
 					<img className="service-image" src={Galber} alt="Drainer & Galber" width={280} height="auto" />
 				</div>
