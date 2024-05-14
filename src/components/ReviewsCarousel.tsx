@@ -56,7 +56,7 @@ const ReviewsCarousel: FunctionComponent<ReviewProps> = ({ isModalOpen, setIsMod
 						<div className="score-container">
 							<p className="score">5.0</p>
 							<img className="stars-image" src={Stars} alt="étoiles Google" width={130} />
-							<p className="number">39 avis</p>
+							<p className="number">40 avis</p>
 						</div>
 					</div>
 

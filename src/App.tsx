@@ -7,7 +7,8 @@ import Footer from "components/Footer";
 import ScrollToTopButton from "components/ScrollToTop";
 import LegalesMentions from "pages/LegalesMentions";
 import Blog from "pages/Blog";
-import Article from "pages/Article";
+// import Article from "pages/Article";
+import NotFound from "pages/404";
 import "./styles/index.scss";
 
 const App: FunctionComponent = () => {
@@ -19,7 +20,8 @@ const App: FunctionComponent = () => {
 					<Route path="/" element={<Home />} />
 					<Route path="/mentions-légales" element={<LegalesMentions />} />
 					<Route path="/blog" element={<Blog />} />
-					<Route path="/:article-label" element={<Article />} />
+					<Route path="*" element={<NotFound />} />
+					{/* <Route path="/:article-label" element={<Article />} /> */}
 				</Routes>
 				<ScrollToTopButton />
 				<Footer />

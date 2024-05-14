@@ -25,6 +25,7 @@ import Renata from "assets/images/WEBP/renata.webp";
 import Madero from "assets/images/WEBP/madero.webp";
 import Ice from "assets/images/WEBP/ice.webp";
 import Galber from "assets/images/WEBP/galber.webp";
+import BienEtre from "assets/images/WEBP/bien-etre.webp";
 import Helene from "assets/images/WEBP/helene.webp";
 
 import ResultsGallery from "components/ResultsGallery";
@@ -205,7 +206,7 @@ const Home: FunctionComponent = () => {
               Un bon suivi post-opératoire détermine à 50% le résultat final de l&apos;intervention.
 						</p>
 						<span className="service-price">Tarif : à partir de 82 € (en cure ou à l’unité)</span>
-						<ReservationButton text="Je prendre rendez-vous" />
+						<ReservationButton text="Je prends rendez-vous" />
 					</div>
 					<img className="service-image" src={PostOp} alt="Drainage post-opératoire" width={280} height="auto" />
 				</div>
@@ -220,7 +221,7 @@ const Home: FunctionComponent = () => {
               lors de votre 1ère séance pour aborder ensemble vos objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 62 € (en cure ou à l’unité)</span>
-						<ReservationButton text="Je prendre rendez-vous" />
+						<ReservationButton text="Je prends rendez-vous" />
 					</div>
 					<img className="service-image" src={Renata} alt="Drainage renata" width={280} height="auto" />
 				</div>
@@ -234,7 +235,7 @@ const Home: FunctionComponent = () => {
               Un diagnostic personnalisé sera offert lors de votre 1ère séance pour aborder ensemble vos objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 53 € (en cure ou à l’unité)</span>
-						<ReservationButton text="Je prendre rendez-vous" />
+						<ReservationButton text="Je prends rendez-vous" />
 					</div>
 					<img className="service-image" src={Madero} alt="Madéréthérapie" width={280} height="auto" />
 				</div>
@@ -249,7 +250,7 @@ const Home: FunctionComponent = () => {
               votre 1ère séance pour aborder ensemble vos objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 74 € (en cure ou à l’unité)</span>
-						<ReservationButton text="Je prendre rendez-vous" />
+						<ReservationButton text="Je prends rendez-vous" />
 					</div>
 					<img className="service-image" src={Ice} alt="Ice madéro" width={280} height="auto" />
 				</div>
@@ -267,9 +268,23 @@ const Home: FunctionComponent = () => {
               objectifs.
 						</p>
 						<span className="service-price">Tarif : à partir de 67 € (en cure ou à l’unité)</span>
-						<ReservationButton text="Je prendre rendez-vous" />
+						<ReservationButton text="Je prends rendez-vous" />
 					</div>
 					<img className="service-image" src={Galber} alt="Drainer & Galber" width={280} height="auto" />
+				</div>
+
+				<div className="service">
+					<div className="service-description">
+						<h3 className="service-title">Massages bien-être</h3>
+						<p className="service-text">
+              Nous proposons également le massage Suédois, le massage relaxant et le Deep Tissue qui vont vous permettre
+              de libérer les tensions de votre corps et de votre esprit. Le massage bien-être permet de s&apos;accorder
+              du temps pour soi, se ressourcer et ainsi se détendre.
+						</p>
+						<span className="service-price">Tarif : à partir de 80 €</span>
+						<ReservationButton text="Je prends rendez-vous" />
+					</div>
+					<img className="service-image" src={BienEtre} alt="Drainer & Galber" width={280} height="auto" />
 				</div>
 			</section>
 
